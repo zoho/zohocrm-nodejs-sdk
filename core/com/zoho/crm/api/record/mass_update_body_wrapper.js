@@ -12,7 +12,7 @@ class MassUpdateBodyWrapper{
 	keyModified = new Map();
 	/**
 	 * The method to get the data
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the data
 	 */
 	getData()	{
 		return this.data;
@@ -21,7 +21,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to set the value to data
-	 * @param {Array} data An Array
+	 * @param {Array} data An Array representing the data
 	 */
 	setData(data)	{
 		if((data != null) && (!(Object.prototype.toString.call(data) == "[object Array]")))	{
@@ -34,7 +34,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to get the cvid
-	 * @returns {String} A String
+	 * @returns {String} A String representing the cvid
 	 */
 	getCvid()	{
 		return this.cvid;
@@ -43,7 +43,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to set the value to cvid
-	 * @param {String} cvid A String
+	 * @param {String} cvid A String representing the cvid
 	 */
 	setCvid(cvid)	{
 		if((cvid != null) && (!(Object.prototype.toString.call(cvid) == "[object String]")))	{
@@ -56,7 +56,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to get the ids
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the ids
 	 */
 	getIds()	{
 		return this.ids;
@@ -65,7 +65,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to set the value to ids
-	 * @param {Array} ids An Array
+	 * @param {Array} ids An Array representing the ids
 	 */
 	setIds(ids)	{
 		if((ids != null) && (!(Object.prototype.toString.call(ids) == "[object Array]")))	{
@@ -101,7 +101,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to get the overWrite
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the overWrite
 	 */
 	getOverWrite()	{
 		return this.overWrite;
@@ -110,7 +110,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to set the value to overWrite
-	 * @param {Boolean} overWrite A Boolean
+	 * @param {Boolean} overWrite A Boolean representing the overWrite
 	 */
 	setOverWrite(overWrite)	{
 		if((overWrite != null) && (!(Object.prototype.toString.call(overWrite) == "[object Boolean]")))	{
@@ -123,7 +123,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to get the criteria
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the criteria
 	 */
 	getCriteria()	{
 		return this.criteria;
@@ -132,7 +132,7 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to set the value to criteria
-	 * @param {Array} criteria An Array
+	 * @param {Array} criteria An Array representing the criteria
 	 */
 	setCriteria(criteria)	{
 		if((criteria != null) && (!(Object.prototype.toString.call(criteria) == "[object Array]")))	{
@@ -145,8 +145,8 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -161,15 +161,15 @@ class MassUpdateBodyWrapper{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

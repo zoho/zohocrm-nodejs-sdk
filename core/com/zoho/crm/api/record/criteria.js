@@ -34,7 +34,7 @@ class Criteria{
 
 	/**
 	 * The method to get the field
-	 * @returns {String} A String
+	 * @returns {String} A String representing the field
 	 */
 	getField()	{
 		return this.field;
@@ -43,7 +43,7 @@ class Criteria{
 
 	/**
 	 * The method to set the value to field
-	 * @param {String} field A String
+	 * @param {String} field A String representing the field
 	 */
 	setField(field)	{
 		if((field != null) && (!(Object.prototype.toString.call(field) == "[object String]")))	{
@@ -56,7 +56,7 @@ class Criteria{
 
 	/**
 	 * The method to get the value
-	 * @returns {Object} An Object
+	 * @returns {Object} An Object representing the value
 	 */
 	getValue()	{
 		return this.value;
@@ -65,7 +65,7 @@ class Criteria{
 
 	/**
 	 * The method to set the value to value
-	 * @param {Object} value An Object
+	 * @param {Object} value An Object representing the value
 	 */
 	setValue(value)	{
 		this.value = value;
@@ -97,7 +97,7 @@ class Criteria{
 
 	/**
 	 * The method to get the group
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the group
 	 */
 	getGroup()	{
 		return this.group;
@@ -106,7 +106,7 @@ class Criteria{
 
 	/**
 	 * The method to set the value to group
-	 * @param {Array} group An Array
+	 * @param {Array} group An Array representing the group
 	 */
 	setGroup(group)	{
 		if((group != null) && (!(Object.prototype.toString.call(group) == "[object Array]")))	{
@@ -119,8 +119,8 @@ class Criteria{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -135,15 +135,15 @@ class Criteria{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

@@ -35,7 +35,7 @@ class DeletedRecord{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -44,7 +44,7 @@ class DeletedRecord{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -57,7 +57,7 @@ class DeletedRecord{
 
 	/**
 	 * The method to get the displayName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayName
 	 */
 	getDisplayName()	{
 		return this.displayName;
@@ -66,7 +66,7 @@ class DeletedRecord{
 
 	/**
 	 * The method to set the value to displayName
-	 * @param {String} displayName A String
+	 * @param {String} displayName A String representing the displayName
 	 */
 	setDisplayName(displayName)	{
 		if((displayName != null) && (!(Object.prototype.toString.call(displayName) == "[object String]")))	{
@@ -79,7 +79,7 @@ class DeletedRecord{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -88,7 +88,7 @@ class DeletedRecord{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -146,8 +146,8 @@ class DeletedRecord{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -162,15 +162,15 @@ class DeletedRecord{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

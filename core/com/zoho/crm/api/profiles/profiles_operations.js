@@ -39,7 +39,7 @@ class ProfilesOperations{
 
 	/**
 	 * The method to get profile
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

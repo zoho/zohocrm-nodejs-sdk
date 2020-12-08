@@ -63,7 +63,7 @@ class BulkWriteOperations{
 
 	/**
 	 * The method to get bulk write job details
-	 * @param {BigInt} jobId A BigInt
+	 * @param {BigInt} jobId A BigInt representing the jobId
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -85,7 +85,7 @@ class BulkWriteOperations{
 
 	/**
 	 * The method to download bulk write result
-	 * @param {String} downloadUrl A String
+	 * @param {String} downloadUrl A String representing the downloadUrl
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

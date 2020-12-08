@@ -10,7 +10,7 @@ class RecordActionWrapper{
 	keyModified = new Map();
 	/**
 	 * The method to get the data
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the data
 	 */
 	getData()	{
 		return this.data;
@@ -19,7 +19,7 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to set the value to data
-	 * @param {Array} data An Array
+	 * @param {Array} data An Array representing the data
 	 */
 	setData(data)	{
 		if((data != null) && (!(Object.prototype.toString.call(data) == "[object Array]")))	{
@@ -32,7 +32,7 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to get the wfScheduler
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the wfScheduler
 	 */
 	getWfScheduler()	{
 		return this.wfScheduler;
@@ -41,7 +41,7 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to set the value to wfScheduler
-	 * @param {Boolean} wfScheduler A Boolean
+	 * @param {Boolean} wfScheduler A Boolean representing the wfScheduler
 	 */
 	setWfScheduler(wfScheduler)	{
 		if((wfScheduler != null) && (!(Object.prototype.toString.call(wfScheduler) == "[object Boolean]")))	{
@@ -54,7 +54,7 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to get the successCount
-	 * @returns {String} A String
+	 * @returns {String} A String representing the successCount
 	 */
 	getSuccessCount()	{
 		return this.successCount;
@@ -63,7 +63,7 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to set the value to successCount
-	 * @param {String} successCount A String
+	 * @param {String} successCount A String representing the successCount
 	 */
 	setSuccessCount(successCount)	{
 		if((successCount != null) && (!(Object.prototype.toString.call(successCount) == "[object String]")))	{
@@ -76,7 +76,7 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to get the lockedCount
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the lockedCount
 	 */
 	getLockedCount()	{
 		return this.lockedCount;
@@ -85,11 +85,11 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to set the value to lockedCount
-	 * @param {Integer} lockedCount An Integer
+	 * @param {number} lockedCount A number representing the lockedCount
 	 */
 	setLockedCount(lockedCount)	{
 		if((lockedCount != null) && (!(Object.prototype.toString.call(lockedCount) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: lockedCount EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: lockedCount EXPECTED TYPE: number", null, null);
 		}
 		this.lockedCount = lockedCount;
 		this.keyModified.set("locked_count", 1);
@@ -98,8 +98,8 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -114,15 +114,15 @@ class RecordActionWrapper{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

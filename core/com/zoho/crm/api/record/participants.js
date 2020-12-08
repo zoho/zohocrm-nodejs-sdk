@@ -6,7 +6,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.getKeyValue("name");
@@ -15,7 +15,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -27,7 +27,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to get the email
-	 * @returns {String} A String
+	 * @returns {String} A String representing the email
 	 */
 	getEmail()	{
 		return this.getKeyValue("Email");
@@ -36,7 +36,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to set the value to email
-	 * @param {String} email A String
+	 * @param {String} email A String representing the email
 	 */
 	setEmail(email)	{
 		if((email != null) && (!(Object.prototype.toString.call(email) == "[object String]")))	{
@@ -48,7 +48,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to get the invited
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the invited
 	 */
 	getInvited()	{
 		return this.getKeyValue("invited");
@@ -57,7 +57,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to set the value to invited
-	 * @param {Boolean} invited A Boolean
+	 * @param {Boolean} invited A Boolean representing the invited
 	 */
 	setInvited(invited)	{
 		if((invited != null) && (!(Object.prototype.toString.call(invited) == "[object Boolean]")))	{
@@ -69,7 +69,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.getKeyValue("type");
@@ -78,7 +78,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -90,7 +90,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to get the participant
-	 * @returns {String} A String
+	 * @returns {String} A String representing the participant
 	 */
 	getParticipant()	{
 		return this.getKeyValue("participant");
@@ -99,7 +99,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to set the value to participant
-	 * @param {String} participant A String
+	 * @param {String} participant A String representing the participant
 	 */
 	setParticipant(participant)	{
 		if((participant != null) && (!(Object.prototype.toString.call(participant) == "[object String]")))	{
@@ -111,7 +111,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to get the status
-	 * @returns {String} A String
+	 * @returns {String} A String representing the status
 	 */
 	getStatus()	{
 		return this.getKeyValue("status");
@@ -120,7 +120,7 @@ class Participants extends Record{
 
 	/**
 	 * The method to set the value to status
-	 * @param {String} status A String
+	 * @param {String} status A String representing the status
 	 */
 	setStatus(status)	{
 		if((status != null) && (!(Object.prototype.toString.call(status) == "[object String]")))	{

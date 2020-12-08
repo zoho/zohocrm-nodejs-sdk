@@ -9,7 +9,7 @@ class LayoutsOperations{
 	module;
 	/**
 	 * Creates an instance of LayoutsOperations with the given parameters
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	constructor(module=null){
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -39,7 +39,7 @@ class LayoutsOperations{
 
 	/**
 	 * The method to get layout
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

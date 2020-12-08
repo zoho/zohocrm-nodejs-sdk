@@ -12,7 +12,7 @@ class MultiSelectLookup{
 	keyModified = new Map();
 	/**
 	 * The method to get the displayLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayLabel
 	 */
 	getDisplayLabel()	{
 		return this.displayLabel;
@@ -21,7 +21,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to set the value to displayLabel
-	 * @param {String} displayLabel A String
+	 * @param {String} displayLabel A String representing the displayLabel
 	 */
 	setDisplayLabel(displayLabel)	{
 		if((displayLabel != null) && (!(Object.prototype.toString.call(displayLabel) == "[object String]")))	{
@@ -34,7 +34,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to get the linkingModule
-	 * @returns {String} A String
+	 * @returns {String} A String representing the linkingModule
 	 */
 	getLinkingModule()	{
 		return this.linkingModule;
@@ -43,7 +43,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to set the value to linkingModule
-	 * @param {String} linkingModule A String
+	 * @param {String} linkingModule A String representing the linkingModule
 	 */
 	setLinkingModule(linkingModule)	{
 		if((linkingModule != null) && (!(Object.prototype.toString.call(linkingModule) == "[object String]")))	{
@@ -56,7 +56,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to get the lookupApiname
-	 * @returns {String} A String
+	 * @returns {String} A String representing the lookupApiname
 	 */
 	getLookupApiname()	{
 		return this.lookupApiname;
@@ -65,7 +65,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to set the value to lookupApiname
-	 * @param {String} lookupApiname A String
+	 * @param {String} lookupApiname A String representing the lookupApiname
 	 */
 	setLookupApiname(lookupApiname)	{
 		if((lookupApiname != null) && (!(Object.prototype.toString.call(lookupApiname) == "[object String]")))	{
@@ -78,7 +78,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to get the apiName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the apiName
 	 */
 	getAPIName()	{
 		return this.apiName;
@@ -87,7 +87,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to set the value to apiName
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 */
 	setAPIName(apiName)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -100,7 +100,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to get the connectedlookupApiname
-	 * @returns {String} A String
+	 * @returns {String} A String representing the connectedlookupApiname
 	 */
 	getConnectedlookupApiname()	{
 		return this.connectedlookupApiname;
@@ -109,7 +109,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to set the value to connectedlookupApiname
-	 * @param {String} connectedlookupApiname A String
+	 * @param {String} connectedlookupApiname A String representing the connectedlookupApiname
 	 */
 	setConnectedlookupApiname(connectedlookupApiname)	{
 		if((connectedlookupApiname != null) && (!(Object.prototype.toString.call(connectedlookupApiname) == "[object String]")))	{
@@ -122,7 +122,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -131,7 +131,7 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -144,8 +144,8 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -160,15 +160,15 @@ class MultiSelectLookup{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

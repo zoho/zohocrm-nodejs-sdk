@@ -10,7 +10,7 @@ class Translation{
 	keyModified = new Map();
 	/**
 	 * The method to get the publicViews
-	 * @returns {String} A String
+	 * @returns {String} A String representing the publicViews
 	 */
 	getPublicViews()	{
 		return this.publicViews;
@@ -19,7 +19,7 @@ class Translation{
 
 	/**
 	 * The method to set the value to publicViews
-	 * @param {String} publicViews A String
+	 * @param {String} publicViews A String representing the publicViews
 	 */
 	setPublicViews(publicViews)	{
 		if((publicViews != null) && (!(Object.prototype.toString.call(publicViews) == "[object String]")))	{
@@ -32,7 +32,7 @@ class Translation{
 
 	/**
 	 * The method to get the otherUsersViews
-	 * @returns {String} A String
+	 * @returns {String} A String representing the otherUsersViews
 	 */
 	getOtherUsersViews()	{
 		return this.otherUsersViews;
@@ -41,7 +41,7 @@ class Translation{
 
 	/**
 	 * The method to set the value to otherUsersViews
-	 * @param {String} otherUsersViews A String
+	 * @param {String} otherUsersViews A String representing the otherUsersViews
 	 */
 	setOtherUsersViews(otherUsersViews)	{
 		if((otherUsersViews != null) && (!(Object.prototype.toString.call(otherUsersViews) == "[object String]")))	{
@@ -54,7 +54,7 @@ class Translation{
 
 	/**
 	 * The method to get the sharedWithMe
-	 * @returns {String} A String
+	 * @returns {String} A String representing the sharedWithMe
 	 */
 	getSharedWithMe()	{
 		return this.sharedWithMe;
@@ -63,7 +63,7 @@ class Translation{
 
 	/**
 	 * The method to set the value to sharedWithMe
-	 * @param {String} sharedWithMe A String
+	 * @param {String} sharedWithMe A String representing the sharedWithMe
 	 */
 	setSharedWithMe(sharedWithMe)	{
 		if((sharedWithMe != null) && (!(Object.prototype.toString.call(sharedWithMe) == "[object String]")))	{
@@ -76,7 +76,7 @@ class Translation{
 
 	/**
 	 * The method to get the createdByMe
-	 * @returns {String} A String
+	 * @returns {String} A String representing the createdByMe
 	 */
 	getCreatedByMe()	{
 		return this.createdByMe;
@@ -85,7 +85,7 @@ class Translation{
 
 	/**
 	 * The method to set the value to createdByMe
-	 * @param {String} createdByMe A String
+	 * @param {String} createdByMe A String representing the createdByMe
 	 */
 	setCreatedByMe(createdByMe)	{
 		if((createdByMe != null) && (!(Object.prototype.toString.call(createdByMe) == "[object String]")))	{
@@ -98,8 +98,8 @@ class Translation{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -114,15 +114,15 @@ class Translation{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

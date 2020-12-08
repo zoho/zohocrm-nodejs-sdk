@@ -11,7 +11,7 @@ class PermissionDetail{
 	keyModified = new Map();
 	/**
 	 * The method to get the displayLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayLabel
 	 */
 	getDisplayLabel()	{
 		return this.displayLabel;
@@ -20,7 +20,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to set the value to displayLabel
-	 * @param {String} displayLabel A String
+	 * @param {String} displayLabel A String representing the displayLabel
 	 */
 	setDisplayLabel(displayLabel)	{
 		if((displayLabel != null) && (!(Object.prototype.toString.call(displayLabel) == "[object String]")))	{
@@ -33,7 +33,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to get the module
-	 * @returns {String} A String
+	 * @returns {String} A String representing the module
 	 */
 	getModule()	{
 		return this.module;
@@ -42,7 +42,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to set the value to module
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	setModule(module)	{
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -55,7 +55,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -64,7 +64,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -77,7 +77,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -86,7 +86,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -99,7 +99,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to get the enabled
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the enabled
 	 */
 	getEnabled()	{
 		return this.enabled;
@@ -108,7 +108,7 @@ class PermissionDetail{
 
 	/**
 	 * The method to set the value to enabled
-	 * @param {Boolean} enabled A Boolean
+	 * @param {Boolean} enabled A Boolean representing the enabled
 	 */
 	setEnabled(enabled)	{
 		if((enabled != null) && (!(Object.prototype.toString.call(enabled) == "[object Boolean]")))	{
@@ -121,8 +121,8 @@ class PermissionDetail{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -137,15 +137,15 @@ class PermissionDetail{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

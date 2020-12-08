@@ -109,7 +109,7 @@ class NotesOperations{
 
 	/**
 	 * The method to get note
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
@@ -141,7 +141,7 @@ class NotesOperations{
 
 	/**
 	 * The method to update note
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -170,7 +170,7 @@ class NotesOperations{
 
 	/**
 	 * The method to delete note
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

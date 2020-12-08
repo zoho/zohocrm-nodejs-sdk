@@ -15,7 +15,7 @@ class JobDetail{
 	keyModified = new Map();
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -24,7 +24,7 @@ class JobDetail{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -37,7 +37,7 @@ class JobDetail{
 
 	/**
 	 * The method to get the operation
-	 * @returns {String} A String
+	 * @returns {String} A String representing the operation
 	 */
 	getOperation()	{
 		return this.operation;
@@ -46,7 +46,7 @@ class JobDetail{
 
 	/**
 	 * The method to set the value to operation
-	 * @param {String} operation A String
+	 * @param {String} operation A String representing the operation
 	 */
 	setOperation(operation)	{
 		if((operation != null) && (!(Object.prototype.toString.call(operation) == "[object String]")))	{
@@ -172,7 +172,7 @@ class JobDetail{
 
 	/**
 	 * The method to get the fileType
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fileType
 	 */
 	getFileType()	{
 		return this.fileType;
@@ -181,7 +181,7 @@ class JobDetail{
 
 	/**
 	 * The method to set the value to fileType
-	 * @param {String} fileType A String
+	 * @param {String} fileType A String representing the fileType
 	 */
 	setFileType(fileType)	{
 		if((fileType != null) && (!(Object.prototype.toString.call(fileType) == "[object String]")))	{
@@ -194,8 +194,8 @@ class JobDetail{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -210,15 +210,15 @@ class JobDetail{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

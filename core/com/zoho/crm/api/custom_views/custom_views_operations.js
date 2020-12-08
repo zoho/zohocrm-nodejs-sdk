@@ -10,7 +10,7 @@ class CustomViewsOperations{
 	module;
 	/**
 	 * Creates an instance of CustomViewsOperations with the given parameters
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	constructor(module=null){
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -45,7 +45,7 @@ class CustomViewsOperations{
 
 	/**
 	 * The method to get custom view
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

@@ -11,8 +11,8 @@ class AttachmentsOperations{
 	moduleAPIName;
 	/**
 	 * Creates an instance of AttachmentsOperations with the given parameters
-	 * @param {String} moduleAPIName A String
-	 * @param {BigInt} recordId A BigInt
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
+	 * @param {BigInt} recordId A BigInt representing the recordId
 	 */
 	constructor(moduleAPIName, recordId){
 		if((!(Object.prototype.toString.call(moduleAPIName) == "[object String]")))	{
@@ -28,7 +28,7 @@ class AttachmentsOperations{
 
 	/**
 	 * The method to download attachment
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -54,7 +54,7 @@ class AttachmentsOperations{
 
 	/**
 	 * The method to delete attachment
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

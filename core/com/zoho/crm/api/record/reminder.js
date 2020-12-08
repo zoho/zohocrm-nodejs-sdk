@@ -8,7 +8,7 @@ class Reminder{
 	keyModified = new Map();
 	/**
 	 * The method to get the period
-	 * @returns {String} A String
+	 * @returns {String} A String representing the period
 	 */
 	getPeriod()	{
 		return this.period;
@@ -17,7 +17,7 @@ class Reminder{
 
 	/**
 	 * The method to set the value to period
-	 * @param {String} period A String
+	 * @param {String} period A String representing the period
 	 */
 	setPeriod(period)	{
 		if((period != null) && (!(Object.prototype.toString.call(period) == "[object String]")))	{
@@ -30,7 +30,7 @@ class Reminder{
 
 	/**
 	 * The method to get the unit
-	 * @returns {String} A String
+	 * @returns {String} A String representing the unit
 	 */
 	getUnit()	{
 		return this.unit;
@@ -39,7 +39,7 @@ class Reminder{
 
 	/**
 	 * The method to set the value to unit
-	 * @param {String} unit A String
+	 * @param {String} unit A String representing the unit
 	 */
 	setUnit(unit)	{
 		if((unit != null) && (!(Object.prototype.toString.call(unit) == "[object String]")))	{
@@ -52,8 +52,8 @@ class Reminder{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -68,15 +68,15 @@ class Reminder{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

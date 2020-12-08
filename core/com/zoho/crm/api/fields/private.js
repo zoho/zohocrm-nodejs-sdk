@@ -9,7 +9,7 @@ class Private{
 	keyModified = new Map();
 	/**
 	 * The method to get the restricted
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the restricted
 	 */
 	getRestricted()	{
 		return this.restricted;
@@ -18,7 +18,7 @@ class Private{
 
 	/**
 	 * The method to set the value to restricted
-	 * @param {Boolean} restricted A Boolean
+	 * @param {Boolean} restricted A Boolean representing the restricted
 	 */
 	setRestricted(restricted)	{
 		if((restricted != null) && (!(Object.prototype.toString.call(restricted) == "[object Boolean]")))	{
@@ -31,7 +31,7 @@ class Private{
 
 	/**
 	 * The method to get the export
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the export1
 	 */
 	getExport()	{
 		return this.export1;
@@ -40,7 +40,7 @@ class Private{
 
 	/**
 	 * The method to set the value to export
-	 * @param {Boolean} export1 A Boolean
+	 * @param {Boolean} export1 A Boolean representing the export1
 	 */
 	setExport(export1)	{
 		if((export1 != null) && (!(Object.prototype.toString.call(export1) == "[object Boolean]")))	{
@@ -53,7 +53,7 @@ class Private{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -62,7 +62,7 @@ class Private{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -75,8 +75,8 @@ class Private{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -91,15 +91,15 @@ class Private{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

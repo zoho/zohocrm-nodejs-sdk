@@ -8,7 +8,7 @@ class Currency{
 	keyModified = new Map();
 	/**
 	 * The method to get the roundingOption
-	 * @returns {String} A String
+	 * @returns {String} A String representing the roundingOption
 	 */
 	getRoundingOption()	{
 		return this.roundingOption;
@@ -17,7 +17,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to roundingOption
-	 * @param {String} roundingOption A String
+	 * @param {String} roundingOption A String representing the roundingOption
 	 */
 	setRoundingOption(roundingOption)	{
 		if((roundingOption != null) && (!(Object.prototype.toString.call(roundingOption) == "[object String]")))	{
@@ -30,7 +30,7 @@ class Currency{
 
 	/**
 	 * The method to get the precision
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the precision
 	 */
 	getPrecision()	{
 		return this.precision;
@@ -39,11 +39,11 @@ class Currency{
 
 	/**
 	 * The method to set the value to precision
-	 * @param {Integer} precision An Integer
+	 * @param {number} precision A number representing the precision
 	 */
 	setPrecision(precision)	{
 		if((precision != null) && (!(Object.prototype.toString.call(precision) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: precision EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: precision EXPECTED TYPE: number", null, null);
 		}
 		this.precision = precision;
 		this.keyModified.set("precision", 1);
@@ -52,8 +52,8 @@ class Currency{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -68,15 +68,15 @@ class Currency{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

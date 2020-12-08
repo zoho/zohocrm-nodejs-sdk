@@ -13,7 +13,7 @@ class PickListValue{
 	keyModified = new Map();
 	/**
 	 * The method to get the displayValue
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayValue
 	 */
 	getDisplayValue()	{
 		return this.displayValue;
@@ -22,7 +22,7 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to displayValue
-	 * @param {String} displayValue A String
+	 * @param {String} displayValue A String representing the displayValue
 	 */
 	setDisplayValue(displayValue)	{
 		if((displayValue != null) && (!(Object.prototype.toString.call(displayValue) == "[object String]")))	{
@@ -35,7 +35,7 @@ class PickListValue{
 
 	/**
 	 * The method to get the sequenceNumber
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the sequenceNumber
 	 */
 	getSequenceNumber()	{
 		return this.sequenceNumber;
@@ -44,11 +44,11 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to sequenceNumber
-	 * @param {Integer} sequenceNumber An Integer
+	 * @param {number} sequenceNumber A number representing the sequenceNumber
 	 */
 	setSequenceNumber(sequenceNumber)	{
 		if((sequenceNumber != null) && (!(Object.prototype.toString.call(sequenceNumber) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: sequenceNumber EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: sequenceNumber EXPECTED TYPE: number", null, null);
 		}
 		this.sequenceNumber = sequenceNumber;
 		this.keyModified.set("sequence_number", 1);
@@ -57,7 +57,7 @@ class PickListValue{
 
 	/**
 	 * The method to get the expectedDataType
-	 * @returns {String} A String
+	 * @returns {String} A String representing the expectedDataType
 	 */
 	getExpectedDataType()	{
 		return this.expectedDataType;
@@ -66,7 +66,7 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to expectedDataType
-	 * @param {String} expectedDataType A String
+	 * @param {String} expectedDataType A String representing the expectedDataType
 	 */
 	setExpectedDataType(expectedDataType)	{
 		if((expectedDataType != null) && (!(Object.prototype.toString.call(expectedDataType) == "[object String]")))	{
@@ -79,7 +79,7 @@ class PickListValue{
 
 	/**
 	 * The method to get the maps
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the maps
 	 */
 	getMaps()	{
 		return this.maps;
@@ -88,7 +88,7 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to maps
-	 * @param {Array} maps An Array
+	 * @param {Array} maps An Array representing the maps
 	 */
 	setMaps(maps)	{
 		if((maps != null) && (!(Object.prototype.toString.call(maps) == "[object Array]")))	{
@@ -101,7 +101,7 @@ class PickListValue{
 
 	/**
 	 * The method to get the actualValue
-	 * @returns {String} A String
+	 * @returns {String} A String representing the actualValue
 	 */
 	getActualValue()	{
 		return this.actualValue;
@@ -110,7 +110,7 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to actualValue
-	 * @param {String} actualValue A String
+	 * @param {String} actualValue A String representing the actualValue
 	 */
 	setActualValue(actualValue)	{
 		if((actualValue != null) && (!(Object.prototype.toString.call(actualValue) == "[object String]")))	{
@@ -123,7 +123,7 @@ class PickListValue{
 
 	/**
 	 * The method to get the sysRefName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the sysRefName
 	 */
 	getSysRefName()	{
 		return this.sysRefName;
@@ -132,7 +132,7 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to sysRefName
-	 * @param {String} sysRefName A String
+	 * @param {String} sysRefName A String representing the sysRefName
 	 */
 	setSysRefName(sysRefName)	{
 		if((sysRefName != null) && (!(Object.prototype.toString.call(sysRefName) == "[object String]")))	{
@@ -145,7 +145,7 @@ class PickListValue{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -154,7 +154,7 @@ class PickListValue{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -167,8 +167,8 @@ class PickListValue{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -183,15 +183,15 @@ class PickListValue{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

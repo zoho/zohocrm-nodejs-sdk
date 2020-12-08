@@ -13,7 +13,7 @@ class LeadConverter{
 	keyModified = new Map();
 	/**
 	 * The method to get the overwrite
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the overwrite
 	 */
 	getOverwrite()	{
 		return this.overwrite;
@@ -22,7 +22,7 @@ class LeadConverter{
 
 	/**
 	 * The method to set the value to overwrite
-	 * @param {Boolean} overwrite A Boolean
+	 * @param {Boolean} overwrite A Boolean representing the overwrite
 	 */
 	setOverwrite(overwrite)	{
 		if((overwrite != null) && (!(Object.prototype.toString.call(overwrite) == "[object Boolean]")))	{
@@ -35,7 +35,7 @@ class LeadConverter{
 
 	/**
 	 * The method to get the notifyLeadOwner
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the notifyLeadOwner
 	 */
 	getNotifyLeadOwner()	{
 		return this.notifyLeadOwner;
@@ -44,7 +44,7 @@ class LeadConverter{
 
 	/**
 	 * The method to set the value to notifyLeadOwner
-	 * @param {Boolean} notifyLeadOwner A Boolean
+	 * @param {Boolean} notifyLeadOwner A Boolean representing the notifyLeadOwner
 	 */
 	setNotifyLeadOwner(notifyLeadOwner)	{
 		if((notifyLeadOwner != null) && (!(Object.prototype.toString.call(notifyLeadOwner) == "[object Boolean]")))	{
@@ -57,7 +57,7 @@ class LeadConverter{
 
 	/**
 	 * The method to get the notifyNewEntityOwner
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the notifyNewEntityOwner
 	 */
 	getNotifyNewEntityOwner()	{
 		return this.notifyNewEntityOwner;
@@ -66,7 +66,7 @@ class LeadConverter{
 
 	/**
 	 * The method to set the value to notifyNewEntityOwner
-	 * @param {Boolean} notifyNewEntityOwner A Boolean
+	 * @param {Boolean} notifyNewEntityOwner A Boolean representing the notifyNewEntityOwner
 	 */
 	setNotifyNewEntityOwner(notifyNewEntityOwner)	{
 		if((notifyNewEntityOwner != null) && (!(Object.prototype.toString.call(notifyNewEntityOwner) == "[object Boolean]")))	{
@@ -79,7 +79,7 @@ class LeadConverter{
 
 	/**
 	 * The method to get the accounts
-	 * @returns {String} A String
+	 * @returns {String} A String representing the accounts
 	 */
 	getAccounts()	{
 		return this.accounts;
@@ -88,7 +88,7 @@ class LeadConverter{
 
 	/**
 	 * The method to set the value to accounts
-	 * @param {String} accounts A String
+	 * @param {String} accounts A String representing the accounts
 	 */
 	setAccounts(accounts)	{
 		if((accounts != null) && (!(Object.prototype.toString.call(accounts) == "[object String]")))	{
@@ -101,7 +101,7 @@ class LeadConverter{
 
 	/**
 	 * The method to get the contacts
-	 * @returns {String} A String
+	 * @returns {String} A String representing the contacts
 	 */
 	getContacts()	{
 		return this.contacts;
@@ -110,7 +110,7 @@ class LeadConverter{
 
 	/**
 	 * The method to set the value to contacts
-	 * @param {String} contacts A String
+	 * @param {String} contacts A String representing the contacts
 	 */
 	setContacts(contacts)	{
 		if((contacts != null) && (!(Object.prototype.toString.call(contacts) == "[object String]")))	{
@@ -123,7 +123,7 @@ class LeadConverter{
 
 	/**
 	 * The method to get the assignTo
-	 * @returns {String} A String
+	 * @returns {String} A String representing the assignTo
 	 */
 	getAssignTo()	{
 		return this.assignTo;
@@ -132,7 +132,7 @@ class LeadConverter{
 
 	/**
 	 * The method to set the value to assignTo
-	 * @param {String} assignTo A String
+	 * @param {String} assignTo A String representing the assignTo
 	 */
 	setAssignTo(assignTo)	{
 		if((assignTo != null) && (!(Object.prototype.toString.call(assignTo) == "[object String]")))	{
@@ -168,8 +168,8 @@ class LeadConverter{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -184,15 +184,15 @@ class LeadConverter{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

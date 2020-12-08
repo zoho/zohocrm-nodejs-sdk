@@ -19,7 +19,7 @@ class Profile{
 	keyModified = new Map();
 	/**
 	 * The method to get the displayLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayLabel
 	 */
 	getDisplayLabel()	{
 		return this.displayLabel;
@@ -28,7 +28,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to displayLabel
-	 * @param {String} displayLabel A String
+	 * @param {String} displayLabel A String representing the displayLabel
 	 */
 	setDisplayLabel(displayLabel)	{
 		if((displayLabel != null) && (!(Object.prototype.toString.call(displayLabel) == "[object String]")))	{
@@ -85,7 +85,7 @@ class Profile{
 
 	/**
 	 * The method to get the permissionsDetails
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the permissionsDetails
 	 */
 	getPermissionsDetails()	{
 		return this.permissionsDetails;
@@ -94,7 +94,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to permissionsDetails
-	 * @param {Array} permissionsDetails An Array
+	 * @param {Array} permissionsDetails An Array representing the permissionsDetails
 	 */
 	setPermissionsDetails(permissionsDetails)	{
 		if((permissionsDetails != null) && (!(Object.prototype.toString.call(permissionsDetails) == "[object Array]")))	{
@@ -107,7 +107,7 @@ class Profile{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -116,7 +116,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -152,7 +152,7 @@ class Profile{
 
 	/**
 	 * The method to get the default
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the default1
 	 */
 	getDefault()	{
 		return this.default1;
@@ -161,7 +161,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to default
-	 * @param {Boolean} default1 A Boolean
+	 * @param {Boolean} default1 A Boolean representing the default1
 	 */
 	setDefault(default1)	{
 		if((default1 != null) && (!(Object.prototype.toString.call(default1) == "[object Boolean]")))	{
@@ -174,7 +174,7 @@ class Profile{
 
 	/**
 	 * The method to get the description
-	 * @returns {String} A String
+	 * @returns {String} A String representing the description
 	 */
 	getDescription()	{
 		return this.description;
@@ -183,7 +183,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to description
-	 * @param {String} description A String
+	 * @param {String} description A String representing the description
 	 */
 	setDescription(description)	{
 		if((description != null) && (!(Object.prototype.toString.call(description) == "[object String]")))	{
@@ -196,7 +196,7 @@ class Profile{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -205,7 +205,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -218,7 +218,7 @@ class Profile{
 
 	/**
 	 * The method to get the category
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the category
 	 */
 	getCategory()	{
 		return this.category;
@@ -227,7 +227,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to category
-	 * @param {Boolean} category A Boolean
+	 * @param {Boolean} category A Boolean representing the category
 	 */
 	setCategory(category)	{
 		if((category != null) && (!(Object.prototype.toString.call(category) == "[object Boolean]")))	{
@@ -263,7 +263,7 @@ class Profile{
 
 	/**
 	 * The method to get the sections
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the sections
 	 */
 	getSections()	{
 		return this.sections;
@@ -272,7 +272,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to sections
-	 * @param {Array} sections An Array
+	 * @param {Array} sections An Array representing the sections
 	 */
 	setSections(sections)	{
 		if((sections != null) && (!(Object.prototype.toString.call(sections) == "[object Array]")))	{
@@ -285,7 +285,7 @@ class Profile{
 
 	/**
 	 * The method to get the delete
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the delete1
 	 */
 	getDelete()	{
 		return this.delete1;
@@ -294,7 +294,7 @@ class Profile{
 
 	/**
 	 * The method to set the value to delete
-	 * @param {Boolean} delete1 A Boolean
+	 * @param {Boolean} delete1 A Boolean representing the delete1
 	 */
 	setDelete(delete1)	{
 		if((delete1 != null) && (!(Object.prototype.toString.call(delete1) == "[object Boolean]")))	{
@@ -307,8 +307,8 @@ class Profile{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -323,15 +323,15 @@ class Profile{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

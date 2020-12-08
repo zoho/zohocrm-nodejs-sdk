@@ -67,7 +67,7 @@ class Note{
 
 	/**
 	 * The method to get the attachments
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the attachments
 	 */
 	getAttachments()	{
 		return this.attachments;
@@ -76,7 +76,7 @@ class Note{
 
 	/**
 	 * The method to set the value to attachments
-	 * @param {Array} attachments An Array
+	 * @param {Array} attachments An Array representing the attachments
 	 */
 	setAttachments(attachments)	{
 		if((attachments != null) && (!(Object.prototype.toString.call(attachments) == "[object Array]")))	{
@@ -134,7 +134,7 @@ class Note{
 
 	/**
 	 * The method to get the editable
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the editable
 	 */
 	getEditable()	{
 		return this.editable;
@@ -143,7 +143,7 @@ class Note{
 
 	/**
 	 * The method to set the value to editable
-	 * @param {Boolean} editable A Boolean
+	 * @param {Boolean} editable A Boolean representing the editable
 	 */
 	setEditable(editable)	{
 		if((editable != null) && (!(Object.prototype.toString.call(editable) == "[object Boolean]")))	{
@@ -156,7 +156,7 @@ class Note{
 
 	/**
 	 * The method to get the seModule
-	 * @returns {String} A String
+	 * @returns {String} A String representing the seModule
 	 */
 	getSeModule()	{
 		return this.seModule;
@@ -165,7 +165,7 @@ class Note{
 
 	/**
 	 * The method to set the value to seModule
-	 * @param {String} seModule A String
+	 * @param {String} seModule A String representing the seModule
 	 */
 	setSeModule(seModule)	{
 		if((seModule != null) && (!(Object.prototype.toString.call(seModule) == "[object String]")))	{
@@ -178,7 +178,7 @@ class Note{
 
 	/**
 	 * The method to get the isSharedToClient
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the isSharedToClient
 	 */
 	getIsSharedToClient()	{
 		return this.isSharedToClient;
@@ -187,7 +187,7 @@ class Note{
 
 	/**
 	 * The method to set the value to isSharedToClient
-	 * @param {Boolean} isSharedToClient A Boolean
+	 * @param {Boolean} isSharedToClient A Boolean representing the isSharedToClient
 	 */
 	setIsSharedToClient(isSharedToClient)	{
 		if((isSharedToClient != null) && (!(Object.prototype.toString.call(isSharedToClient) == "[object Boolean]")))	{
@@ -223,7 +223,7 @@ class Note{
 
 	/**
 	 * The method to get the size
-	 * @returns {String} A String
+	 * @returns {String} A String representing the size
 	 */
 	getSize()	{
 		return this.size;
@@ -232,7 +232,7 @@ class Note{
 
 	/**
 	 * The method to set the value to size
-	 * @param {String} size A String
+	 * @param {String} size A String representing the size
 	 */
 	setSize(size)	{
 		if((size != null) && (!(Object.prototype.toString.call(size) == "[object String]")))	{
@@ -245,7 +245,7 @@ class Note{
 
 	/**
 	 * The method to get the state
-	 * @returns {String} A String
+	 * @returns {String} A String representing the state
 	 */
 	getState()	{
 		return this.state;
@@ -254,7 +254,7 @@ class Note{
 
 	/**
 	 * The method to set the value to state
-	 * @param {String} state A String
+	 * @param {String} state A String representing the state
 	 */
 	setState(state)	{
 		if((state != null) && (!(Object.prototype.toString.call(state) == "[object String]")))	{
@@ -267,7 +267,7 @@ class Note{
 
 	/**
 	 * The method to get the voiceNote
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the voiceNote
 	 */
 	getVoiceNote()	{
 		return this.voiceNote;
@@ -276,7 +276,7 @@ class Note{
 
 	/**
 	 * The method to set the value to voiceNote
-	 * @param {Boolean} voiceNote A Boolean
+	 * @param {Boolean} voiceNote A Boolean representing the voiceNote
 	 */
 	setVoiceNote(voiceNote)	{
 		if((voiceNote != null) && (!(Object.prototype.toString.call(voiceNote) == "[object Boolean]")))	{
@@ -289,7 +289,7 @@ class Note{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -298,7 +298,7 @@ class Note{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -334,7 +334,7 @@ class Note{
 
 	/**
 	 * The method to get the noteTitle
-	 * @returns {String} A String
+	 * @returns {String} A String representing the noteTitle
 	 */
 	getNoteTitle()	{
 		return this.noteTitle;
@@ -343,7 +343,7 @@ class Note{
 
 	/**
 	 * The method to set the value to noteTitle
-	 * @param {String} noteTitle A String
+	 * @param {String} noteTitle A String representing the noteTitle
 	 */
 	setNoteTitle(noteTitle)	{
 		if((noteTitle != null) && (!(Object.prototype.toString.call(noteTitle) == "[object String]")))	{
@@ -356,7 +356,7 @@ class Note{
 
 	/**
 	 * The method to get the noteContent
-	 * @returns {String} A String
+	 * @returns {String} A String representing the noteContent
 	 */
 	getNoteContent()	{
 		return this.noteContent;
@@ -365,7 +365,7 @@ class Note{
 
 	/**
 	 * The method to set the value to noteContent
-	 * @param {String} noteContent A String
+	 * @param {String} noteContent A String representing the noteContent
 	 */
 	setNoteContent(noteContent)	{
 		if((noteContent != null) && (!(Object.prototype.toString.call(noteContent) == "[object String]")))	{
@@ -378,8 +378,8 @@ class Note{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -394,15 +394,15 @@ class Note{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

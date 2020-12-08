@@ -12,7 +12,7 @@ class BodyWrapper{
 	keyModified = new Map();
 	/**
 	 * The method to get the data
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the data
 	 */
 	getData()	{
 		return this.data;
@@ -21,7 +21,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to set the value to data
-	 * @param {Array} data An Array
+	 * @param {Array} data An Array representing the data
 	 */
 	setData(data)	{
 		if((data != null) && (!(Object.prototype.toString.call(data) == "[object Array]")))	{
@@ -34,7 +34,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to get the trigger
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the trigger
 	 */
 	getTrigger()	{
 		return this.trigger;
@@ -43,7 +43,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to set the value to trigger
-	 * @param {Array} trigger An Array
+	 * @param {Array} trigger An Array representing the trigger
 	 */
 	setTrigger(trigger)	{
 		if((trigger != null) && (!(Object.prototype.toString.call(trigger) == "[object Array]")))	{
@@ -56,7 +56,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to get the process
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the process
 	 */
 	getProcess()	{
 		return this.process;
@@ -65,7 +65,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to set the value to process
-	 * @param {Array} process An Array
+	 * @param {Array} process An Array representing the process
 	 */
 	setProcess(process)	{
 		if((process != null) && (!(Object.prototype.toString.call(process) == "[object Array]")))	{
@@ -78,7 +78,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to get the duplicateCheckFields
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the duplicateCheckFields
 	 */
 	getDuplicateCheckFields()	{
 		return this.duplicateCheckFields;
@@ -87,7 +87,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to set the value to duplicateCheckFields
-	 * @param {Array} duplicateCheckFields An Array
+	 * @param {Array} duplicateCheckFields An Array representing the duplicateCheckFields
 	 */
 	setDuplicateCheckFields(duplicateCheckFields)	{
 		if((duplicateCheckFields != null) && (!(Object.prototype.toString.call(duplicateCheckFields) == "[object Array]")))	{
@@ -100,7 +100,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to get the wfTrigger
-	 * @returns {String} A String
+	 * @returns {String} A String representing the wfTrigger
 	 */
 	getWfTrigger()	{
 		return this.wfTrigger;
@@ -109,7 +109,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to set the value to wfTrigger
-	 * @param {String} wfTrigger A String
+	 * @param {String} wfTrigger A String representing the wfTrigger
 	 */
 	setWfTrigger(wfTrigger)	{
 		if((wfTrigger != null) && (!(Object.prototype.toString.call(wfTrigger) == "[object String]")))	{
@@ -122,7 +122,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to get the larId
-	 * @returns {String} A String
+	 * @returns {String} A String representing the larId
 	 */
 	getLarId()	{
 		return this.larId;
@@ -131,7 +131,7 @@ class BodyWrapper{
 
 	/**
 	 * The method to set the value to larId
-	 * @param {String} larId A String
+	 * @param {String} larId A String representing the larId
 	 */
 	setLarId(larId)	{
 		if((larId != null) && (!(Object.prototype.toString.call(larId) == "[object String]")))	{
@@ -144,8 +144,8 @@ class BodyWrapper{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -160,15 +160,15 @@ class BodyWrapper{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

@@ -10,7 +10,7 @@ class ViewType{
 	keyModified = new Map();
 	/**
 	 * The method to get the view
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the view
 	 */
 	getView()	{
 		return this.view;
@@ -19,7 +19,7 @@ class ViewType{
 
 	/**
 	 * The method to set the value to view
-	 * @param {Boolean} view A Boolean
+	 * @param {Boolean} view A Boolean representing the view
 	 */
 	setView(view)	{
 		if((view != null) && (!(Object.prototype.toString.call(view) == "[object Boolean]")))	{
@@ -32,7 +32,7 @@ class ViewType{
 
 	/**
 	 * The method to get the edit
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the edit
 	 */
 	getEdit()	{
 		return this.edit;
@@ -41,7 +41,7 @@ class ViewType{
 
 	/**
 	 * The method to set the value to edit
-	 * @param {Boolean} edit A Boolean
+	 * @param {Boolean} edit A Boolean representing the edit
 	 */
 	setEdit(edit)	{
 		if((edit != null) && (!(Object.prototype.toString.call(edit) == "[object Boolean]")))	{
@@ -54,7 +54,7 @@ class ViewType{
 
 	/**
 	 * The method to get the create
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the create
 	 */
 	getCreate()	{
 		return this.create;
@@ -63,7 +63,7 @@ class ViewType{
 
 	/**
 	 * The method to set the value to create
-	 * @param {Boolean} create A Boolean
+	 * @param {Boolean} create A Boolean representing the create
 	 */
 	setCreate(create)	{
 		if((create != null) && (!(Object.prototype.toString.call(create) == "[object Boolean]")))	{
@@ -76,7 +76,7 @@ class ViewType{
 
 	/**
 	 * The method to get the quickCreate
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the quickCreate
 	 */
 	getQuickCreate()	{
 		return this.quickCreate;
@@ -85,7 +85,7 @@ class ViewType{
 
 	/**
 	 * The method to set the value to quickCreate
-	 * @param {Boolean} quickCreate A Boolean
+	 * @param {Boolean} quickCreate A Boolean representing the quickCreate
 	 */
 	setQuickCreate(quickCreate)	{
 		if((quickCreate != null) && (!(Object.prototype.toString.call(quickCreate) == "[object Boolean]")))	{
@@ -98,8 +98,8 @@ class ViewType{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -114,15 +114,15 @@ class ViewType{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

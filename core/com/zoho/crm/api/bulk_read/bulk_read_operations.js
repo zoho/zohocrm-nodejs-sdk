@@ -6,7 +6,7 @@ const SDKException = require("../exception/sdk_exception").MasterModel;
 class BulkReadOperations{
 	/**
 	 * The method to get bulk read job details
-	 * @param {BigInt} jobId A BigInt
+	 * @param {BigInt} jobId A BigInt representing the jobId
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -28,7 +28,7 @@ class BulkReadOperations{
 
 	/**
 	 * The method to download result
-	 * @param {BigInt} jobId A BigInt
+	 * @param {BigInt} jobId A BigInt representing the jobId
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

@@ -11,7 +11,7 @@ class RequestWrapper{
 	keyModified = new Map();
 	/**
 	 * The method to get the characterEncoding
-	 * @returns {String} A String
+	 * @returns {String} A String representing the characterEncoding
 	 */
 	getCharacterEncoding()	{
 		return this.characterEncoding;
@@ -20,7 +20,7 @@ class RequestWrapper{
 
 	/**
 	 * The method to set the value to characterEncoding
-	 * @param {String} characterEncoding A String
+	 * @param {String} characterEncoding A String representing the characterEncoding
 	 */
 	setCharacterEncoding(characterEncoding)	{
 		if((characterEncoding != null) && (!(Object.prototype.toString.call(characterEncoding) == "[object String]")))	{
@@ -78,7 +78,7 @@ class RequestWrapper{
 
 	/**
 	 * The method to get the resource
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the resource
 	 */
 	getResource()	{
 		return this.resource;
@@ -87,7 +87,7 @@ class RequestWrapper{
 
 	/**
 	 * The method to set the value to resource
-	 * @param {Array} resource An Array
+	 * @param {Array} resource An Array representing the resource
 	 */
 	setResource(resource)	{
 		if((resource != null) && (!(Object.prototype.toString.call(resource) == "[object Array]")))	{
@@ -100,8 +100,8 @@ class RequestWrapper{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -116,15 +116,15 @@ class RequestWrapper{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

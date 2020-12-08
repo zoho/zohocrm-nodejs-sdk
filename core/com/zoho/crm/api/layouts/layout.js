@@ -40,7 +40,7 @@ class Layout{
 
 	/**
 	 * The method to get the convertMapping
-	 * @returns {Map} A Map
+	 * @returns {Map} A Map representing the convertMapping
 	 */
 	getConvertMapping()	{
 		return this.convertMapping;
@@ -49,7 +49,7 @@ class Layout{
 
 	/**
 	 * The method to set the value to convertMapping
-	 * @param {Map} convertMapping A Map
+	 * @param {Map} convertMapping A Map representing the convertMapping
 	 */
 	setConvertMapping(convertMapping)	{
 		if((convertMapping != null) && (!(Object.prototype.toString.call(convertMapping) == "[object Map]")))	{
@@ -84,7 +84,7 @@ class Layout{
 
 	/**
 	 * The method to get the visible
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the visible
 	 */
 	getVisible()	{
 		return this.visible;
@@ -93,7 +93,7 @@ class Layout{
 
 	/**
 	 * The method to set the value to visible
-	 * @param {Boolean} visible A Boolean
+	 * @param {Boolean} visible A Boolean representing the visible
 	 */
 	setVisible(visible)	{
 		if((visible != null) && (!(Object.prototype.toString.call(visible) == "[object Boolean]")))	{
@@ -129,7 +129,7 @@ class Layout{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -138,7 +138,7 @@ class Layout{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -174,7 +174,7 @@ class Layout{
 
 	/**
 	 * The method to get the profiles
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the profiles
 	 */
 	getProfiles()	{
 		return this.profiles;
@@ -183,7 +183,7 @@ class Layout{
 
 	/**
 	 * The method to set the value to profiles
-	 * @param {Array} profiles An Array
+	 * @param {Array} profiles An Array representing the profiles
 	 */
 	setProfiles(profiles)	{
 		if((profiles != null) && (!(Object.prototype.toString.call(profiles) == "[object Array]")))	{
@@ -196,7 +196,7 @@ class Layout{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -205,7 +205,7 @@ class Layout{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -241,7 +241,7 @@ class Layout{
 
 	/**
 	 * The method to get the sections
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the sections
 	 */
 	getSections()	{
 		return this.sections;
@@ -250,7 +250,7 @@ class Layout{
 
 	/**
 	 * The method to set the value to sections
-	 * @param {Array} sections An Array
+	 * @param {Array} sections An Array representing the sections
 	 */
 	setSections(sections)	{
 		if((sections != null) && (!(Object.prototype.toString.call(sections) == "[object Array]")))	{
@@ -263,7 +263,7 @@ class Layout{
 
 	/**
 	 * The method to get the status
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the status
 	 */
 	getStatus()	{
 		return this.status;
@@ -272,11 +272,11 @@ class Layout{
 
 	/**
 	 * The method to set the value to status
-	 * @param {Integer} status An Integer
+	 * @param {number} status A number representing the status
 	 */
 	setStatus(status)	{
 		if((status != null) && (!(Object.prototype.toString.call(status) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: status EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: status EXPECTED TYPE: number", null, null);
 		}
 		this.status = status;
 		this.keyModified.set("status", 1);
@@ -285,8 +285,8 @@ class Layout{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -301,15 +301,15 @@ class Layout{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

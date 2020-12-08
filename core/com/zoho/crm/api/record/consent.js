@@ -28,7 +28,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the contactThroughEmail
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the contactThroughEmail
 	 */
 	getContactThroughEmail()	{
 		return this.getKeyValue("Contact_Through_Email");
@@ -37,7 +37,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to contactThroughEmail
-	 * @param {Boolean} contactThroughEmail A Boolean
+	 * @param {Boolean} contactThroughEmail A Boolean representing the contactThroughEmail
 	 */
 	setContactThroughEmail(contactThroughEmail)	{
 		if((contactThroughEmail != null) && (!(Object.prototype.toString.call(contactThroughEmail) == "[object Boolean]")))	{
@@ -49,7 +49,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the contactThroughSocial
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the contactThroughSocial
 	 */
 	getContactThroughSocial()	{
 		return this.getKeyValue("Contact_Through_Social");
@@ -58,7 +58,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to contactThroughSocial
-	 * @param {Boolean} contactThroughSocial A Boolean
+	 * @param {Boolean} contactThroughSocial A Boolean representing the contactThroughSocial
 	 */
 	setContactThroughSocial(contactThroughSocial)	{
 		if((contactThroughSocial != null) && (!(Object.prototype.toString.call(contactThroughSocial) == "[object Boolean]")))	{
@@ -70,7 +70,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the contactThroughSurvey
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the contactThroughSurvey
 	 */
 	getContactThroughSurvey()	{
 		return this.getKeyValue("Contact_Through_Survey");
@@ -79,7 +79,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to contactThroughSurvey
-	 * @param {Boolean} contactThroughSurvey A Boolean
+	 * @param {Boolean} contactThroughSurvey A Boolean representing the contactThroughSurvey
 	 */
 	setContactThroughSurvey(contactThroughSurvey)	{
 		if((contactThroughSurvey != null) && (!(Object.prototype.toString.call(contactThroughSurvey) == "[object Boolean]")))	{
@@ -91,7 +91,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the contactThroughPhone
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the contactThroughPhone
 	 */
 	getContactThroughPhone()	{
 		return this.getKeyValue("Contact_Through_Phone");
@@ -100,7 +100,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to contactThroughPhone
-	 * @param {Boolean} contactThroughPhone A Boolean
+	 * @param {Boolean} contactThroughPhone A Boolean representing the contactThroughPhone
 	 */
 	setContactThroughPhone(contactThroughPhone)	{
 		if((contactThroughPhone != null) && (!(Object.prototype.toString.call(contactThroughPhone) == "[object Boolean]")))	{
@@ -154,7 +154,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the consentRemarks
-	 * @returns {String} A String
+	 * @returns {String} A String representing the consentRemarks
 	 */
 	getConsentRemarks()	{
 		return this.getKeyValue("Consent_Remarks");
@@ -163,7 +163,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to consentRemarks
-	 * @param {String} consentRemarks A String
+	 * @param {String} consentRemarks A String representing the consentRemarks
 	 */
 	setConsentRemarks(consentRemarks)	{
 		if((consentRemarks != null) && (!(Object.prototype.toString.call(consentRemarks) == "[object String]")))	{
@@ -175,7 +175,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the consentThrough
-	 * @returns {String} A String
+	 * @returns {String} A String representing the consentThrough
 	 */
 	getConsentThrough()	{
 		return this.getKeyValue("Consent_Through");
@@ -184,7 +184,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to consentThrough
-	 * @param {String} consentThrough A String
+	 * @param {String} consentThrough A String representing the consentThrough
 	 */
 	setConsentThrough(consentThrough)	{
 		if((consentThrough != null) && (!(Object.prototype.toString.call(consentThrough) == "[object String]")))	{
@@ -196,7 +196,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to get the dataProcessingBasis
-	 * @returns {String} A String
+	 * @returns {String} A String representing the dataProcessingBasis
 	 */
 	getDataProcessingBasis()	{
 		return this.getKeyValue("Data_Processing_Basis");
@@ -205,7 +205,7 @@ class Consent extends Record{
 
 	/**
 	 * The method to set the value to dataProcessingBasis
-	 * @param {String} dataProcessingBasis A String
+	 * @param {String} dataProcessingBasis A String representing the dataProcessingBasis
 	 */
 	setDataProcessingBasis(dataProcessingBasis)	{
 		if((dataProcessingBasis != null) && (!(Object.prototype.toString.call(dataProcessingBasis) == "[object String]")))	{

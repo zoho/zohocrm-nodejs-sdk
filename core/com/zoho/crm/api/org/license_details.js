@@ -34,7 +34,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to get the usersLicensePurchased
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the usersLicensePurchased
 	 */
 	getUsersLicensePurchased()	{
 		return this.usersLicensePurchased;
@@ -43,7 +43,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to set the value to usersLicensePurchased
-	 * @param {BigInt} usersLicensePurchased A BigInt
+	 * @param {BigInt} usersLicensePurchased A BigInt representing the usersLicensePurchased
 	 */
 	setUsersLicensePurchased(usersLicensePurchased)	{
 		if((usersLicensePurchased != null) && (!(Object.prototype.toString.call(usersLicensePurchased) == "[object BigInt]")))	{
@@ -56,7 +56,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to get the trialType
-	 * @returns {String} A String
+	 * @returns {String} A String representing the trialType
 	 */
 	getTrialType()	{
 		return this.trialType;
@@ -65,7 +65,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to set the value to trialType
-	 * @param {String} trialType A String
+	 * @param {String} trialType A String representing the trialType
 	 */
 	setTrialType(trialType)	{
 		if((trialType != null) && (!(Object.prototype.toString.call(trialType) == "[object String]")))	{
@@ -78,7 +78,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to get the trialExpiry
-	 * @returns {String} A String
+	 * @returns {String} A String representing the trialExpiry
 	 */
 	getTrialExpiry()	{
 		return this.trialExpiry;
@@ -87,7 +87,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to set the value to trialExpiry
-	 * @param {String} trialExpiry A String
+	 * @param {String} trialExpiry A String representing the trialExpiry
 	 */
 	setTrialExpiry(trialExpiry)	{
 		if((trialExpiry != null) && (!(Object.prototype.toString.call(trialExpiry) == "[object String]")))	{
@@ -100,7 +100,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to get the paid
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the paid
 	 */
 	getPaid()	{
 		return this.paid;
@@ -109,7 +109,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to set the value to paid
-	 * @param {Boolean} paid A Boolean
+	 * @param {Boolean} paid A Boolean representing the paid
 	 */
 	setPaid(paid)	{
 		if((paid != null) && (!(Object.prototype.toString.call(paid) == "[object Boolean]")))	{
@@ -122,7 +122,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to get the paidType
-	 * @returns {String} A String
+	 * @returns {String} A String representing the paidType
 	 */
 	getPaidType()	{
 		return this.paidType;
@@ -131,7 +131,7 @@ class LicenseDetails{
 
 	/**
 	 * The method to set the value to paidType
-	 * @param {String} paidType A String
+	 * @param {String} paidType A String representing the paidType
 	 */
 	setPaidType(paidType)	{
 		if((paidType != null) && (!(Object.prototype.toString.call(paidType) == "[object String]")))	{
@@ -144,8 +144,8 @@ class LicenseDetails{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -160,15 +160,15 @@ class LicenseDetails{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

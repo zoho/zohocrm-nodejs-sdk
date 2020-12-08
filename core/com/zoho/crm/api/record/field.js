@@ -4,7 +4,7 @@ class Field{
 	apiName;
 	/**
 	 * Creates an instance of Field with the given parameters
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 */
 	constructor(apiName){
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -16,7 +16,7 @@ class Field{
 
 	/**
 	 * The method to get the apiName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the apiName
 	 */
 	getAPIName()	{
 		return this.apiName;

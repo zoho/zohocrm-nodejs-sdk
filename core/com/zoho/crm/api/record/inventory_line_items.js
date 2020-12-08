@@ -28,7 +28,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the quantity
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the quantity
 	 */
 	getQuantity()	{
 		return this.getKeyValue("quantity");
@@ -37,7 +37,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to quantity
-	 * @param {Float} quantity A Float
+	 * @param {Float} quantity A Float representing the quantity
 	 */
 	setQuantity(quantity)	{
 		if((quantity != null) && (!(Object.prototype.toString.call(quantity) == "[object Number]")))	{
@@ -49,7 +49,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the discount
-	 * @returns {String} A String
+	 * @returns {String} A String representing the discount
 	 */
 	getDiscount()	{
 		return this.getKeyValue("Discount");
@@ -58,7 +58,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to discount
-	 * @param {String} discount A String
+	 * @param {String} discount A String representing the discount
 	 */
 	setDiscount(discount)	{
 		if((discount != null) && (!(Object.prototype.toString.call(discount) == "[object String]")))	{
@@ -70,7 +70,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the totalAfterDiscount
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the totalAfterDiscount
 	 */
 	getTotalAfterDiscount()	{
 		return this.getKeyValue("total_after_discount");
@@ -79,7 +79,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to totalAfterDiscount
-	 * @param {Float} totalAfterDiscount A Float
+	 * @param {Float} totalAfterDiscount A Float representing the totalAfterDiscount
 	 */
 	setTotalAfterDiscount(totalAfterDiscount)	{
 		if((totalAfterDiscount != null) && (!(Object.prototype.toString.call(totalAfterDiscount) == "[object Number]")))	{
@@ -91,7 +91,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the netTotal
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the netTotal
 	 */
 	getNetTotal()	{
 		return this.getKeyValue("net_total");
@@ -100,7 +100,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to netTotal
-	 * @param {Float} netTotal A Float
+	 * @param {Float} netTotal A Float representing the netTotal
 	 */
 	setNetTotal(netTotal)	{
 		if((netTotal != null) && (!(Object.prototype.toString.call(netTotal) == "[object Number]")))	{
@@ -112,7 +112,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the book
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the book
 	 */
 	getBook()	{
 		return this.getKeyValue("book");
@@ -121,7 +121,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to book
-	 * @param {Float} book A Float
+	 * @param {Float} book A Float representing the book
 	 */
 	setBook(book)	{
 		if((book != null) && (!(Object.prototype.toString.call(book) == "[object Number]")))	{
@@ -133,7 +133,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the tax
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the tax
 	 */
 	getTax()	{
 		return this.getKeyValue("Tax");
@@ -142,7 +142,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to tax
-	 * @param {Float} tax A Float
+	 * @param {Float} tax A Float representing the tax
 	 */
 	setTax(tax)	{
 		if((tax != null) && (!(Object.prototype.toString.call(tax) == "[object Number]")))	{
@@ -154,7 +154,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the listPrice
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the listPrice
 	 */
 	getListPrice()	{
 		return this.getKeyValue("list_price");
@@ -163,7 +163,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to listPrice
-	 * @param {Float} listPrice A Float
+	 * @param {Float} listPrice A Float representing the listPrice
 	 */
 	setListPrice(listPrice)	{
 		if((listPrice != null) && (!(Object.prototype.toString.call(listPrice) == "[object Number]")))	{
@@ -175,7 +175,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the unitPrice
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the unitPrice
 	 */
 	getUnitPrice()	{
 		return this.getKeyValue("unit_price");
@@ -184,7 +184,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to unitPrice
-	 * @param {Float} unitPrice A Float
+	 * @param {Float} unitPrice A Float representing the unitPrice
 	 */
 	setUnitPrice(unitPrice)	{
 		if((unitPrice != null) && (!(Object.prototype.toString.call(unitPrice) == "[object Number]")))	{
@@ -196,7 +196,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the quantityInStock
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the quantityInStock
 	 */
 	getQuantityInStock()	{
 		return this.getKeyValue("quantity_in_stock");
@@ -205,7 +205,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to quantityInStock
-	 * @param {Float} quantityInStock A Float
+	 * @param {Float} quantityInStock A Float representing the quantityInStock
 	 */
 	setQuantityInStock(quantityInStock)	{
 		if((quantityInStock != null) && (!(Object.prototype.toString.call(quantityInStock) == "[object Number]")))	{
@@ -217,7 +217,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the total
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the total
 	 */
 	getTotal()	{
 		return this.getKeyValue("total");
@@ -226,7 +226,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to total
-	 * @param {Float} total A Float
+	 * @param {Float} total A Float representing the total
 	 */
 	setTotal(total)	{
 		if((total != null) && (!(Object.prototype.toString.call(total) == "[object Number]")))	{
@@ -238,7 +238,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the productDescription
-	 * @returns {String} A String
+	 * @returns {String} A String representing the productDescription
 	 */
 	getProductDescription()	{
 		return this.getKeyValue("product_description");
@@ -247,7 +247,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to productDescription
-	 * @param {String} productDescription A String
+	 * @param {String} productDescription A String representing the productDescription
 	 */
 	setProductDescription(productDescription)	{
 		if((productDescription != null) && (!(Object.prototype.toString.call(productDescription) == "[object String]")))	{
@@ -259,7 +259,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to get the lineTax
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the lineTax
 	 */
 	getLineTax()	{
 		return this.getKeyValue("line_tax");
@@ -268,7 +268,7 @@ class InventoryLineItems extends Record{
 
 	/**
 	 * The method to set the value to lineTax
-	 * @param {Array} lineTax An Array
+	 * @param {Array} lineTax An Array representing the lineTax
 	 */
 	setLineTax(lineTax)	{
 		if((lineTax != null) && (!(Object.prototype.toString.call(lineTax) == "[object Array]")))	{

@@ -90,7 +90,7 @@ class TagsOperations{
 
 	/**
 	 * The method to update tag
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
@@ -124,7 +124,7 @@ class TagsOperations{
 
 	/**
 	 * The method to delete tag
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -146,7 +146,7 @@ class TagsOperations{
 
 	/**
 	 * The method to merge tags
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {MergeWrapper} request An instance of MergeWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -177,8 +177,8 @@ class TagsOperations{
 
 	/**
 	 * The method to add tags to record
-	 * @param {BigInt} recordId A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} recordId A BigInt representing the recordId
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -212,8 +212,8 @@ class TagsOperations{
 
 	/**
 	 * The method to remove tags from record
-	 * @param {BigInt} recordId A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} recordId A BigInt representing the recordId
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -247,7 +247,7 @@ class TagsOperations{
 
 	/**
 	 * The method to add tags to multiple records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -276,7 +276,7 @@ class TagsOperations{
 
 	/**
 	 * The method to remove tags from multiple records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -305,7 +305,7 @@ class TagsOperations{
 
 	/**
 	 * The method to get record count for tag
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}

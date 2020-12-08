@@ -6,7 +6,7 @@ class PricingDetails extends Record{
 
 	/**
 	 * The method to get the toRange
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the toRange
 	 */
 	getToRange()	{
 		return this.getKeyValue("to_range");
@@ -15,7 +15,7 @@ class PricingDetails extends Record{
 
 	/**
 	 * The method to set the value to toRange
-	 * @param {Float} toRange A Float
+	 * @param {Float} toRange A Float representing the toRange
 	 */
 	setToRange(toRange)	{
 		if((toRange != null) && (!(Object.prototype.toString.call(toRange) == "[object Number]")))	{
@@ -27,7 +27,7 @@ class PricingDetails extends Record{
 
 	/**
 	 * The method to get the discount
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the discount
 	 */
 	getDiscount()	{
 		return this.getKeyValue("discount");
@@ -36,7 +36,7 @@ class PricingDetails extends Record{
 
 	/**
 	 * The method to set the value to discount
-	 * @param {Float} discount A Float
+	 * @param {Float} discount A Float representing the discount
 	 */
 	setDiscount(discount)	{
 		if((discount != null) && (!(Object.prototype.toString.call(discount) == "[object Number]")))	{
@@ -48,7 +48,7 @@ class PricingDetails extends Record{
 
 	/**
 	 * The method to get the fromRange
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the fromRange
 	 */
 	getFromRange()	{
 		return this.getKeyValue("from_range");
@@ -57,7 +57,7 @@ class PricingDetails extends Record{
 
 	/**
 	 * The method to set the value to fromRange
-	 * @param {Float} fromRange A Float
+	 * @param {Float} fromRange A Float representing the fromRange
 	 */
 	setFromRange(fromRange)	{
 		if((fromRange != null) && (!(Object.prototype.toString.call(fromRange) == "[object Number]")))	{

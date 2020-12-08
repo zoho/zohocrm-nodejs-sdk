@@ -10,7 +10,7 @@ class FieldsOperations{
 	module;
 	/**
 	 * Creates an instance of FieldsOperations with the given parameters
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	constructor(module=null){
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -45,7 +45,7 @@ class FieldsOperations{
 
 	/**
 	 * The method to get field
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

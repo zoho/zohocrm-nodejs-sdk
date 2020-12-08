@@ -23,7 +23,7 @@ class VariableGroupsOperations{
 
 	/**
 	 * The method to get variable group by id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -45,7 +45,7 @@ class VariableGroupsOperations{
 
 	/**
 	 * The method to get variable group by api name
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

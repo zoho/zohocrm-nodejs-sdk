@@ -9,7 +9,7 @@ class RelatedListProperties{
 	keyModified = new Map();
 	/**
 	 * The method to get the sortBy
-	 * @returns {String} A String
+	 * @returns {String} A String representing the sortBy
 	 */
 	getSortBy()	{
 		return this.sortBy;
@@ -18,7 +18,7 @@ class RelatedListProperties{
 
 	/**
 	 * The method to set the value to sortBy
-	 * @param {String} sortBy A String
+	 * @param {String} sortBy A String representing the sortBy
 	 */
 	setSortBy(sortBy)	{
 		if((sortBy != null) && (!(Object.prototype.toString.call(sortBy) == "[object String]")))	{
@@ -31,7 +31,7 @@ class RelatedListProperties{
 
 	/**
 	 * The method to get the fields
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the fields
 	 */
 	getFields()	{
 		return this.fields;
@@ -40,7 +40,7 @@ class RelatedListProperties{
 
 	/**
 	 * The method to set the value to fields
-	 * @param {Array} fields An Array
+	 * @param {Array} fields An Array representing the fields
 	 */
 	setFields(fields)	{
 		if((fields != null) && (!(Object.prototype.toString.call(fields) == "[object Array]")))	{
@@ -53,7 +53,7 @@ class RelatedListProperties{
 
 	/**
 	 * The method to get the sortOrder
-	 * @returns {String} A String
+	 * @returns {String} A String representing the sortOrder
 	 */
 	getSortOrder()	{
 		return this.sortOrder;
@@ -62,7 +62,7 @@ class RelatedListProperties{
 
 	/**
 	 * The method to set the value to sortOrder
-	 * @param {String} sortOrder A String
+	 * @param {String} sortOrder A String representing the sortOrder
 	 */
 	setSortOrder(sortOrder)	{
 		if((sortOrder != null) && (!(Object.prototype.toString.call(sortOrder) == "[object String]")))	{
@@ -75,8 +75,8 @@ class RelatedListProperties{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -91,15 +91,15 @@ class RelatedListProperties{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

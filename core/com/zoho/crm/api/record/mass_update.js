@@ -34,7 +34,7 @@ class MassUpdate{
 
 	/**
 	 * The method to get the failedCount
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the failedCount
 	 */
 	getFailedCount()	{
 		return this.failedCount;
@@ -43,11 +43,11 @@ class MassUpdate{
 
 	/**
 	 * The method to set the value to failedCount
-	 * @param {Integer} failedCount An Integer
+	 * @param {number} failedCount A number representing the failedCount
 	 */
 	setFailedCount(failedCount)	{
 		if((failedCount != null) && (!(Object.prototype.toString.call(failedCount) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: failedCount EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: failedCount EXPECTED TYPE: number", null, null);
 		}
 		this.failedCount = failedCount;
 		this.keyModified.set("Failed_Count", 1);
@@ -56,7 +56,7 @@ class MassUpdate{
 
 	/**
 	 * The method to get the updatedCount
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the updatedCount
 	 */
 	getUpdatedCount()	{
 		return this.updatedCount;
@@ -65,11 +65,11 @@ class MassUpdate{
 
 	/**
 	 * The method to set the value to updatedCount
-	 * @param {Integer} updatedCount An Integer
+	 * @param {number} updatedCount A number representing the updatedCount
 	 */
 	setUpdatedCount(updatedCount)	{
 		if((updatedCount != null) && (!(Object.prototype.toString.call(updatedCount) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: updatedCount EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: updatedCount EXPECTED TYPE: number", null, null);
 		}
 		this.updatedCount = updatedCount;
 		this.keyModified.set("Updated_Count", 1);
@@ -78,7 +78,7 @@ class MassUpdate{
 
 	/**
 	 * The method to get the notUpdatedCount
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the notUpdatedCount
 	 */
 	getNotUpdatedCount()	{
 		return this.notUpdatedCount;
@@ -87,11 +87,11 @@ class MassUpdate{
 
 	/**
 	 * The method to set the value to notUpdatedCount
-	 * @param {Integer} notUpdatedCount An Integer
+	 * @param {number} notUpdatedCount A number representing the notUpdatedCount
 	 */
 	setNotUpdatedCount(notUpdatedCount)	{
 		if((notUpdatedCount != null) && (!(Object.prototype.toString.call(notUpdatedCount) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: notUpdatedCount EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: notUpdatedCount EXPECTED TYPE: number", null, null);
 		}
 		this.notUpdatedCount = notUpdatedCount;
 		this.keyModified.set("Not_Updated_Count", 1);
@@ -100,7 +100,7 @@ class MassUpdate{
 
 	/**
 	 * The method to get the totalCount
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the totalCount
 	 */
 	getTotalCount()	{
 		return this.totalCount;
@@ -109,11 +109,11 @@ class MassUpdate{
 
 	/**
 	 * The method to set the value to totalCount
-	 * @param {Integer} totalCount An Integer
+	 * @param {number} totalCount A number representing the totalCount
 	 */
 	setTotalCount(totalCount)	{
 		if((totalCount != null) && (!(Object.prototype.toString.call(totalCount) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: totalCount EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: totalCount EXPECTED TYPE: number", null, null);
 		}
 		this.totalCount = totalCount;
 		this.keyModified.set("Total_Count", 1);
@@ -122,8 +122,8 @@ class MassUpdate{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -138,15 +138,15 @@ class MassUpdate{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

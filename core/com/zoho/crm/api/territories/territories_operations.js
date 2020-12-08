@@ -23,7 +23,7 @@ class TerritoriesOperations{
 
 	/**
 	 * The method to get territory
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

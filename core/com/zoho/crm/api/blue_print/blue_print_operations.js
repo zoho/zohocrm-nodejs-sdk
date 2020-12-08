@@ -9,8 +9,8 @@ class BluePrintOperations{
 	recordId;
 	/**
 	 * Creates an instance of BluePrintOperations with the given parameters
-	 * @param {BigInt} recordId A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} recordId A BigInt representing the recordId
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 */
 	constructor(recordId, moduleAPIName){
 		if((!(Object.prototype.toString.call(recordId) == "[object BigInt]")))	{

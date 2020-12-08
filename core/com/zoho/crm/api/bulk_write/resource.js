@@ -59,7 +59,7 @@ class Resource{
 
 	/**
 	 * The method to get the module
-	 * @returns {String} A String
+	 * @returns {String} A String representing the module
 	 */
 	getModule()	{
 		return this.module;
@@ -68,7 +68,7 @@ class Resource{
 
 	/**
 	 * The method to set the value to module
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	setModule(module)	{
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -81,7 +81,7 @@ class Resource{
 
 	/**
 	 * The method to get the fileId
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fileId
 	 */
 	getFileId()	{
 		return this.fileId;
@@ -90,7 +90,7 @@ class Resource{
 
 	/**
 	 * The method to set the value to fileId
-	 * @param {String} fileId A String
+	 * @param {String} fileId A String representing the fileId
 	 */
 	setFileId(fileId)	{
 		if((fileId != null) && (!(Object.prototype.toString.call(fileId) == "[object String]")))	{
@@ -103,7 +103,7 @@ class Resource{
 
 	/**
 	 * The method to get the ignoreEmpty
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the ignoreEmpty
 	 */
 	getIgnoreEmpty()	{
 		return this.ignoreEmpty;
@@ -112,7 +112,7 @@ class Resource{
 
 	/**
 	 * The method to set the value to ignoreEmpty
-	 * @param {Boolean} ignoreEmpty A Boolean
+	 * @param {Boolean} ignoreEmpty A Boolean representing the ignoreEmpty
 	 */
 	setIgnoreEmpty(ignoreEmpty)	{
 		if((ignoreEmpty != null) && (!(Object.prototype.toString.call(ignoreEmpty) == "[object Boolean]")))	{
@@ -125,7 +125,7 @@ class Resource{
 
 	/**
 	 * The method to get the findBy
-	 * @returns {String} A String
+	 * @returns {String} A String representing the findBy
 	 */
 	getFindBy()	{
 		return this.findBy;
@@ -134,7 +134,7 @@ class Resource{
 
 	/**
 	 * The method to set the value to findBy
-	 * @param {String} findBy A String
+	 * @param {String} findBy A String representing the findBy
 	 */
 	setFindBy(findBy)	{
 		if((findBy != null) && (!(Object.prototype.toString.call(findBy) == "[object String]")))	{
@@ -147,7 +147,7 @@ class Resource{
 
 	/**
 	 * The method to get the fieldMappings
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the fieldMappings
 	 */
 	getFieldMappings()	{
 		return this.fieldMappings;
@@ -156,7 +156,7 @@ class Resource{
 
 	/**
 	 * The method to set the value to fieldMappings
-	 * @param {Array} fieldMappings An Array
+	 * @param {Array} fieldMappings An Array representing the fieldMappings
 	 */
 	setFieldMappings(fieldMappings)	{
 		if((fieldMappings != null) && (!(Object.prototype.toString.call(fieldMappings) == "[object Array]")))	{
@@ -192,8 +192,8 @@ class Resource{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -208,15 +208,15 @@ class Resource{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

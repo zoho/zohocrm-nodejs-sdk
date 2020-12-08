@@ -19,7 +19,7 @@ class Currency{
 	keyModified = new Map();
 	/**
 	 * The method to get the symbol
-	 * @returns {String} A String
+	 * @returns {String} A String representing the symbol
 	 */
 	getSymbol()	{
 		return this.symbol;
@@ -28,7 +28,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to symbol
-	 * @param {String} symbol A String
+	 * @param {String} symbol A String representing the symbol
 	 */
 	setSymbol(symbol)	{
 		if((symbol != null) && (!(Object.prototype.toString.call(symbol) == "[object String]")))	{
@@ -63,7 +63,7 @@ class Currency{
 
 	/**
 	 * The method to get the isActive
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the isActive
 	 */
 	getIsActive()	{
 		return this.isActive;
@@ -72,7 +72,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to isActive
-	 * @param {Boolean} isActive A Boolean
+	 * @param {Boolean} isActive A Boolean representing the isActive
 	 */
 	setIsActive(isActive)	{
 		if((isActive != null) && (!(Object.prototype.toString.call(isActive) == "[object Boolean]")))	{
@@ -85,7 +85,7 @@ class Currency{
 
 	/**
 	 * The method to get the exchangeRate
-	 * @returns {String} A String
+	 * @returns {String} A String representing the exchangeRate
 	 */
 	getExchangeRate()	{
 		return this.exchangeRate;
@@ -94,7 +94,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to exchangeRate
-	 * @param {String} exchangeRate A String
+	 * @param {String} exchangeRate A String representing the exchangeRate
 	 */
 	setExchangeRate(exchangeRate)	{
 		if((exchangeRate != null) && (!(Object.prototype.toString.call(exchangeRate) == "[object String]")))	{
@@ -153,7 +153,7 @@ class Currency{
 
 	/**
 	 * The method to get the prefixSymbol
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the prefixSymbol
 	 */
 	getPrefixSymbol()	{
 		return this.prefixSymbol;
@@ -162,7 +162,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to prefixSymbol
-	 * @param {Boolean} prefixSymbol A Boolean
+	 * @param {Boolean} prefixSymbol A Boolean representing the prefixSymbol
 	 */
 	setPrefixSymbol(prefixSymbol)	{
 		if((prefixSymbol != null) && (!(Object.prototype.toString.call(prefixSymbol) == "[object Boolean]")))	{
@@ -175,7 +175,7 @@ class Currency{
 
 	/**
 	 * The method to get the isBase
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the isBase
 	 */
 	getIsBase()	{
 		return this.isBase;
@@ -184,7 +184,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to isBase
-	 * @param {Boolean} isBase A Boolean
+	 * @param {Boolean} isBase A Boolean representing the isBase
 	 */
 	setIsBase(isBase)	{
 		if((isBase != null) && (!(Object.prototype.toString.call(isBase) == "[object Boolean]")))	{
@@ -219,7 +219,7 @@ class Currency{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -228,7 +228,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -264,7 +264,7 @@ class Currency{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -273,7 +273,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -286,7 +286,7 @@ class Currency{
 
 	/**
 	 * The method to get the isoCode
-	 * @returns {String} A String
+	 * @returns {String} A String representing the isoCode
 	 */
 	getIsoCode()	{
 		return this.isoCode;
@@ -295,7 +295,7 @@ class Currency{
 
 	/**
 	 * The method to set the value to isoCode
-	 * @param {String} isoCode A String
+	 * @param {String} isoCode A String representing the isoCode
 	 */
 	setIsoCode(isoCode)	{
 		if((isoCode != null) && (!(Object.prototype.toString.call(isoCode) == "[object String]")))	{
@@ -308,8 +308,8 @@ class Currency{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -324,15 +324,15 @@ class Currency{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

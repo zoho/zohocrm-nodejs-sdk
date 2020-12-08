@@ -12,7 +12,7 @@ class CustomizeInfo{
 	keyModified = new Map();
 	/**
 	 * The method to get the notesDesc
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the notesDesc
 	 */
 	getNotesDesc()	{
 		return this.notesDesc;
@@ -21,7 +21,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to set the value to notesDesc
-	 * @param {Boolean} notesDesc A Boolean
+	 * @param {Boolean} notesDesc A Boolean representing the notesDesc
 	 */
 	setNotesDesc(notesDesc)	{
 		if((notesDesc != null) && (!(Object.prototype.toString.call(notesDesc) == "[object Boolean]")))	{
@@ -34,7 +34,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to get the showRightPanel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the showRightPanel
 	 */
 	getShowRightPanel()	{
 		return this.showRightPanel;
@@ -43,7 +43,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to set the value to showRightPanel
-	 * @param {String} showRightPanel A String
+	 * @param {String} showRightPanel A String representing the showRightPanel
 	 */
 	setShowRightPanel(showRightPanel)	{
 		if((showRightPanel != null) && (!(Object.prototype.toString.call(showRightPanel) == "[object String]")))	{
@@ -56,7 +56,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to get the bcView
-	 * @returns {String} A String
+	 * @returns {String} A String representing the bcView
 	 */
 	getBcView()	{
 		return this.bcView;
@@ -65,7 +65,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to set the value to bcView
-	 * @param {String} bcView A String
+	 * @param {String} bcView A String representing the bcView
 	 */
 	setBcView(bcView)	{
 		if((bcView != null) && (!(Object.prototype.toString.call(bcView) == "[object String]")))	{
@@ -78,7 +78,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to get the showHome
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the showHome
 	 */
 	getShowHome()	{
 		return this.showHome;
@@ -87,7 +87,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to set the value to showHome
-	 * @param {Boolean} showHome A Boolean
+	 * @param {Boolean} showHome A Boolean representing the showHome
 	 */
 	setShowHome(showHome)	{
 		if((showHome != null) && (!(Object.prototype.toString.call(showHome) == "[object Boolean]")))	{
@@ -100,7 +100,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to get the showDetailView
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the showDetailView
 	 */
 	getShowDetailView()	{
 		return this.showDetailView;
@@ -109,7 +109,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to set the value to showDetailView
-	 * @param {Boolean} showDetailView A Boolean
+	 * @param {Boolean} showDetailView A Boolean representing the showDetailView
 	 */
 	setShowDetailView(showDetailView)	{
 		if((showDetailView != null) && (!(Object.prototype.toString.call(showDetailView) == "[object Boolean]")))	{
@@ -122,7 +122,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to get the unpinRecentItem
-	 * @returns {String} A String
+	 * @returns {String} A String representing the unpinRecentItem
 	 */
 	getUnpinRecentItem()	{
 		return this.unpinRecentItem;
@@ -131,7 +131,7 @@ class CustomizeInfo{
 
 	/**
 	 * The method to set the value to unpinRecentItem
-	 * @param {String} unpinRecentItem A String
+	 * @param {String} unpinRecentItem A String representing the unpinRecentItem
 	 */
 	setUnpinRecentItem(unpinRecentItem)	{
 		if((unpinRecentItem != null) && (!(Object.prototype.toString.call(unpinRecentItem) == "[object String]")))	{
@@ -144,8 +144,8 @@ class CustomizeInfo{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -160,15 +160,15 @@ class CustomizeInfo{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

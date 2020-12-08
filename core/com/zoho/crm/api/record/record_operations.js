@@ -11,8 +11,8 @@ const SDKException = require("../exception/sdk_exception").MasterModel;
 class RecordOperations{
 	/**
 	 * The method to get record
-	 * @param {BigInt} id A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} id A BigInt representing the id
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
@@ -51,8 +51,8 @@ class RecordOperations{
 
 	/**
 	 * The method to update record
-	 * @param {BigInt} id A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} id A BigInt representing the id
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -88,8 +88,8 @@ class RecordOperations{
 
 	/**
 	 * The method to delete record
-	 * @param {BigInt} id A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} id A BigInt representing the id
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -121,7 +121,7 @@ class RecordOperations{
 
 	/**
 	 * The method to get records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
@@ -155,7 +155,7 @@ class RecordOperations{
 
 	/**
 	 * The method to create records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -187,7 +187,7 @@ class RecordOperations{
 
 	/**
 	 * The method to update records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -219,7 +219,7 @@ class RecordOperations{
 
 	/**
 	 * The method to delete records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -246,7 +246,7 @@ class RecordOperations{
 
 	/**
 	 * The method to upsert records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -278,7 +278,7 @@ class RecordOperations{
 
 	/**
 	 * The method to get deleted records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
@@ -311,7 +311,7 @@ class RecordOperations{
 
 	/**
 	 * The method to search records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -341,7 +341,7 @@ class RecordOperations{
 
 	/**
 	 * The method to convert lead
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {ConvertBodyWrapper} request An instance of ConvertBodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -373,8 +373,8 @@ class RecordOperations{
 
 	/**
 	 * The method to get photo
-	 * @param {BigInt} id A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} id A BigInt representing the id
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -402,8 +402,8 @@ class RecordOperations{
 
 	/**
 	 * The method to upload photo
-	 * @param {BigInt} id A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} id A BigInt representing the id
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {FileBodyWrapper} request An instance of FileBodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -439,8 +439,8 @@ class RecordOperations{
 
 	/**
 	 * The method to delete photo
-	 * @param {BigInt} id A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {BigInt} id A BigInt representing the id
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -468,7 +468,7 @@ class RecordOperations{
 
 	/**
 	 * The method to mass update records
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {MassUpdateBodyWrapper} request An instance of MassUpdateBodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -501,7 +501,7 @@ class RecordOperations{
 
 	/**
 	 * The method to get mass update status
-	 * @param {String} moduleAPIName A String
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}

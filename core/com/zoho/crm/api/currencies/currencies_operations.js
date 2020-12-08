@@ -123,7 +123,7 @@ class CurrenciesOperations{
 
 	/**
 	 * The method to get currency
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -145,7 +145,7 @@ class CurrenciesOperations{
 
 	/**
 	 * The method to update currency
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}

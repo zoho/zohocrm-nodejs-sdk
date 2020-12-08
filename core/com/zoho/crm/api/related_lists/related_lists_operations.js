@@ -9,7 +9,7 @@ class RelatedListsOperations{
 	module;
 	/**
 	 * Creates an instance of RelatedListsOperations with the given parameters
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	constructor(module=null){
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -39,7 +39,7 @@ class RelatedListsOperations{
 
 	/**
 	 * The method to get related list
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

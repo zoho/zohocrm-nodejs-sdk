@@ -58,7 +58,7 @@ class Theme{
 
 	/**
 	 * The method to get the newBackground
-	 * @returns {String} A String
+	 * @returns {String} A String representing the newBackground
 	 */
 	getNewBackground()	{
 		return this.newBackground;
@@ -67,7 +67,7 @@ class Theme{
 
 	/**
 	 * The method to set the value to newBackground
-	 * @param {String} newBackground A String
+	 * @param {String} newBackground A String representing the newBackground
 	 */
 	setNewBackground(newBackground)	{
 		if((newBackground != null) && (!(Object.prototype.toString.call(newBackground) == "[object String]")))	{
@@ -80,7 +80,7 @@ class Theme{
 
 	/**
 	 * The method to get the background
-	 * @returns {String} A String
+	 * @returns {String} A String representing the background
 	 */
 	getBackground()	{
 		return this.background;
@@ -89,7 +89,7 @@ class Theme{
 
 	/**
 	 * The method to set the value to background
-	 * @param {String} background A String
+	 * @param {String} background A String representing the background
 	 */
 	setBackground(background)	{
 		if((background != null) && (!(Object.prototype.toString.call(background) == "[object String]")))	{
@@ -102,7 +102,7 @@ class Theme{
 
 	/**
 	 * The method to get the screen
-	 * @returns {String} A String
+	 * @returns {String} A String representing the screen
 	 */
 	getScreen()	{
 		return this.screen;
@@ -111,7 +111,7 @@ class Theme{
 
 	/**
 	 * The method to set the value to screen
-	 * @param {String} screen A String
+	 * @param {String} screen A String representing the screen
 	 */
 	setScreen(screen)	{
 		if((screen != null) && (!(Object.prototype.toString.call(screen) == "[object String]")))	{
@@ -124,7 +124,7 @@ class Theme{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -133,7 +133,7 @@ class Theme{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -146,8 +146,8 @@ class Theme{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -162,15 +162,15 @@ class Theme{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

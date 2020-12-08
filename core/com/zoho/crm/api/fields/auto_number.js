@@ -9,7 +9,7 @@ class AutoNumber{
 	keyModified = new Map();
 	/**
 	 * The method to get the prefix
-	 * @returns {String} A String
+	 * @returns {String} A String representing the prefix
 	 */
 	getPrefix()	{
 		return this.prefix;
@@ -18,7 +18,7 @@ class AutoNumber{
 
 	/**
 	 * The method to set the value to prefix
-	 * @param {String} prefix A String
+	 * @param {String} prefix A String representing the prefix
 	 */
 	setPrefix(prefix)	{
 		if((prefix != null) && (!(Object.prototype.toString.call(prefix) == "[object String]")))	{
@@ -31,7 +31,7 @@ class AutoNumber{
 
 	/**
 	 * The method to get the suffix
-	 * @returns {String} A String
+	 * @returns {String} A String representing the suffix
 	 */
 	getSuffix()	{
 		return this.suffix;
@@ -40,7 +40,7 @@ class AutoNumber{
 
 	/**
 	 * The method to set the value to suffix
-	 * @param {String} suffix A String
+	 * @param {String} suffix A String representing the suffix
 	 */
 	setSuffix(suffix)	{
 		if((suffix != null) && (!(Object.prototype.toString.call(suffix) == "[object String]")))	{
@@ -53,7 +53,7 @@ class AutoNumber{
 
 	/**
 	 * The method to get the startNumber
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the startNumber
 	 */
 	getStartNumber()	{
 		return this.startNumber;
@@ -62,11 +62,11 @@ class AutoNumber{
 
 	/**
 	 * The method to set the value to startNumber
-	 * @param {Integer} startNumber An Integer
+	 * @param {number} startNumber A number representing the startNumber
 	 */
 	setStartNumber(startNumber)	{
 		if((startNumber != null) && (!(Object.prototype.toString.call(startNumber) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: startNumber EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: startNumber EXPECTED TYPE: number", null, null);
 		}
 		this.startNumber = startNumber;
 		this.keyModified.set("start_number", 1);
@@ -75,8 +75,8 @@ class AutoNumber{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -91,15 +91,15 @@ class AutoNumber{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

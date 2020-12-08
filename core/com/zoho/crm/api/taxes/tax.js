@@ -11,7 +11,7 @@ class Tax{
 	keyModified = new Map();
 	/**
 	 * The method to get the displayLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayLabel
 	 */
 	getDisplayLabel()	{
 		return this.displayLabel;
@@ -20,7 +20,7 @@ class Tax{
 
 	/**
 	 * The method to set the value to displayLabel
-	 * @param {String} displayLabel A String
+	 * @param {String} displayLabel A String representing the displayLabel
 	 */
 	setDisplayLabel(displayLabel)	{
 		if((displayLabel != null) && (!(Object.prototype.toString.call(displayLabel) == "[object String]")))	{
@@ -33,7 +33,7 @@ class Tax{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -42,7 +42,7 @@ class Tax{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -55,7 +55,7 @@ class Tax{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -64,7 +64,7 @@ class Tax{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -77,7 +77,7 @@ class Tax{
 
 	/**
 	 * The method to get the value
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the value
 	 */
 	getValue()	{
 		return this.value;
@@ -86,7 +86,7 @@ class Tax{
 
 	/**
 	 * The method to set the value to value
-	 * @param {Float} value A Float
+	 * @param {Float} value A Float representing the value
 	 */
 	setValue(value)	{
 		if((value != null) && (!(Object.prototype.toString.call(value) == "[object Number]")))	{
@@ -99,7 +99,7 @@ class Tax{
 
 	/**
 	 * The method to get the sequenceNumber
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the sequenceNumber
 	 */
 	getSequenceNumber()	{
 		return this.sequenceNumber;
@@ -108,11 +108,11 @@ class Tax{
 
 	/**
 	 * The method to set the value to sequenceNumber
-	 * @param {Integer} sequenceNumber An Integer
+	 * @param {number} sequenceNumber A number representing the sequenceNumber
 	 */
 	setSequenceNumber(sequenceNumber)	{
 		if((sequenceNumber != null) && (!(Object.prototype.toString.call(sequenceNumber) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: sequenceNumber EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: sequenceNumber EXPECTED TYPE: number", null, null);
 		}
 		this.sequenceNumber = sequenceNumber;
 		this.keyModified.set("sequence_number", 1);
@@ -121,8 +121,8 @@ class Tax{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -137,15 +137,15 @@ class Tax{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

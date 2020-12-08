@@ -17,7 +17,7 @@ class Transition{
 	keyModified = new Map();
 	/**
 	 * The method to get the nextTransitions
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the nextTransitions
 	 */
 	getNextTransitions()	{
 		return this.nextTransitions;
@@ -26,7 +26,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to nextTransitions
-	 * @param {Array} nextTransitions An Array
+	 * @param {Array} nextTransitions An Array representing the nextTransitions
 	 */
 	setNextTransitions(nextTransitions)	{
 		if((nextTransitions != null) && (!(Object.prototype.toString.call(nextTransitions) == "[object Array]")))	{
@@ -39,7 +39,7 @@ class Transition{
 
 	/**
 	 * The method to get the percentPartialSave
-	 * @returns {Float} A Float
+	 * @returns {Float} A Float representing the percentPartialSave
 	 */
 	getPercentPartialSave()	{
 		return this.percentPartialSave;
@@ -48,7 +48,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to percentPartialSave
-	 * @param {Float} percentPartialSave A Float
+	 * @param {Float} percentPartialSave A Float representing the percentPartialSave
 	 */
 	setPercentPartialSave(percentPartialSave)	{
 		if((percentPartialSave != null) && (!(Object.prototype.toString.call(percentPartialSave) == "[object Number]")))	{
@@ -84,7 +84,7 @@ class Transition{
 
 	/**
 	 * The method to get the nextFieldValue
-	 * @returns {String} A String
+	 * @returns {String} A String representing the nextFieldValue
 	 */
 	getNextFieldValue()	{
 		return this.nextFieldValue;
@@ -93,7 +93,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to nextFieldValue
-	 * @param {String} nextFieldValue A String
+	 * @param {String} nextFieldValue A String representing the nextFieldValue
 	 */
 	setNextFieldValue(nextFieldValue)	{
 		if((nextFieldValue != null) && (!(Object.prototype.toString.call(nextFieldValue) == "[object String]")))	{
@@ -106,7 +106,7 @@ class Transition{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -115,7 +115,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -128,7 +128,7 @@ class Transition{
 
 	/**
 	 * The method to get the criteriaMatched
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the criteriaMatched
 	 */
 	getCriteriaMatched()	{
 		return this.criteriaMatched;
@@ -137,7 +137,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to criteriaMatched
-	 * @param {Boolean} criteriaMatched A Boolean
+	 * @param {Boolean} criteriaMatched A Boolean representing the criteriaMatched
 	 */
 	setCriteriaMatched(criteriaMatched)	{
 		if((criteriaMatched != null) && (!(Object.prototype.toString.call(criteriaMatched) == "[object Boolean]")))	{
@@ -150,7 +150,7 @@ class Transition{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -159,7 +159,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -172,7 +172,7 @@ class Transition{
 
 	/**
 	 * The method to get the fields
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the fields
 	 */
 	getFields()	{
 		return this.fields;
@@ -181,7 +181,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to fields
-	 * @param {Array} fields An Array
+	 * @param {Array} fields An Array representing the fields
 	 */
 	setFields(fields)	{
 		if((fields != null) && (!(Object.prototype.toString.call(fields) == "[object Array]")))	{
@@ -194,7 +194,7 @@ class Transition{
 
 	/**
 	 * The method to get the criteriaMessage
-	 * @returns {String} A String
+	 * @returns {String} A String representing the criteriaMessage
 	 */
 	getCriteriaMessage()	{
 		return this.criteriaMessage;
@@ -203,7 +203,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to criteriaMessage
-	 * @param {String} criteriaMessage A String
+	 * @param {String} criteriaMessage A String representing the criteriaMessage
 	 */
 	setCriteriaMessage(criteriaMessage)	{
 		if((criteriaMessage != null) && (!(Object.prototype.toString.call(criteriaMessage) == "[object String]")))	{
@@ -216,7 +216,7 @@ class Transition{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -225,7 +225,7 @@ class Transition{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -260,8 +260,8 @@ class Transition{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -276,15 +276,15 @@ class Transition{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

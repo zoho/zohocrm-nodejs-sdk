@@ -102,7 +102,7 @@ class VariablesOperations{
 
 	/**
 	 * The method to get variable by id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -129,7 +129,7 @@ class VariablesOperations{
 
 	/**
 	 * The method to update variable by id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -158,7 +158,7 @@ class VariablesOperations{
 
 	/**
 	 * The method to delete variable
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -180,7 +180,7 @@ class VariablesOperations{
 
 	/**
 	 * The method to get variable for api name
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -207,7 +207,7 @@ class VariablesOperations{
 
 	/**
 	 * The method to update variable by api name
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}

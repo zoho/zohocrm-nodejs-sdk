@@ -6,7 +6,7 @@ class LineItemProduct extends Record{
 
 	/**
 	 * The method to get the productCode
-	 * @returns {String} A String
+	 * @returns {String} A String representing the productCode
 	 */
 	getProductCode()	{
 		return this.getKeyValue("Product_Code");
@@ -15,7 +15,7 @@ class LineItemProduct extends Record{
 
 	/**
 	 * The method to set the value to productCode
-	 * @param {String} productCode A String
+	 * @param {String} productCode A String representing the productCode
 	 */
 	setProductCode(productCode)	{
 		if((productCode != null) && (!(Object.prototype.toString.call(productCode) == "[object String]")))	{
@@ -27,7 +27,7 @@ class LineItemProduct extends Record{
 
 	/**
 	 * The method to get the currency
-	 * @returns {String} A String
+	 * @returns {String} A String representing the currency
 	 */
 	getCurrency()	{
 		return this.getKeyValue("Currency");
@@ -36,7 +36,7 @@ class LineItemProduct extends Record{
 
 	/**
 	 * The method to set the value to currency
-	 * @param {String} currency A String
+	 * @param {String} currency A String representing the currency
 	 */
 	setCurrency(currency)	{
 		if((currency != null) && (!(Object.prototype.toString.call(currency) == "[object String]")))	{
@@ -48,7 +48,7 @@ class LineItemProduct extends Record{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.getKeyValue("name");
@@ -57,7 +57,7 @@ class LineItemProduct extends Record{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{

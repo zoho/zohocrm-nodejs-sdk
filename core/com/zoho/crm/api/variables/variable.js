@@ -13,7 +13,7 @@ class Variable{
 	keyModified = new Map();
 	/**
 	 * The method to get the apiName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the apiName
 	 */
 	getAPIName()	{
 		return this.apiName;
@@ -22,7 +22,7 @@ class Variable{
 
 	/**
 	 * The method to set the value to apiName
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 */
 	setAPIName(apiName)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -35,7 +35,7 @@ class Variable{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -44,7 +44,7 @@ class Variable{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -57,7 +57,7 @@ class Variable{
 
 	/**
 	 * The method to get the description
-	 * @returns {String} A String
+	 * @returns {String} A String representing the description
 	 */
 	getDescription()	{
 		return this.description;
@@ -66,7 +66,7 @@ class Variable{
 
 	/**
 	 * The method to set the value to description
-	 * @param {String} description A String
+	 * @param {String} description A String representing the description
 	 */
 	setDescription(description)	{
 		if((description != null) && (!(Object.prototype.toString.call(description) == "[object String]")))	{
@@ -79,7 +79,7 @@ class Variable{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -88,7 +88,7 @@ class Variable{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -101,7 +101,7 @@ class Variable{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -110,7 +110,7 @@ class Variable{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -146,7 +146,7 @@ class Variable{
 
 	/**
 	 * The method to get the value
-	 * @returns {Object} An Object
+	 * @returns {Object} An Object representing the value
 	 */
 	getValue()	{
 		return this.value;
@@ -155,7 +155,7 @@ class Variable{
 
 	/**
 	 * The method to set the value to value
-	 * @param {Object} value An Object
+	 * @param {Object} value An Object representing the value
 	 */
 	setValue(value)	{
 		this.value = value;
@@ -165,8 +165,8 @@ class Variable{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -181,15 +181,15 @@ class Variable{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

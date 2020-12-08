@@ -87,7 +87,7 @@ class UsersOperations{
 
 	/**
 	 * The method to get user
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -114,7 +114,7 @@ class UsersOperations{
 
 	/**
 	 * The method to update user
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -143,7 +143,7 @@ class UsersOperations{
 
 	/**
 	 * The method to delete user
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

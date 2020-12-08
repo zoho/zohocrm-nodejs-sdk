@@ -54,7 +54,7 @@ class Field{
 	keyModified = new Map();
 	/**
 	 * The method to get the systemMandatory
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the systemMandatory
 	 */
 	getSystemMandatory()	{
 		return this.systemMandatory;
@@ -63,7 +63,7 @@ class Field{
 
 	/**
 	 * The method to set the value to systemMandatory
-	 * @param {Boolean} systemMandatory A Boolean
+	 * @param {Boolean} systemMandatory A Boolean representing the systemMandatory
 	 */
 	setSystemMandatory(systemMandatory)	{
 		if((systemMandatory != null) && (!(Object.prototype.toString.call(systemMandatory) == "[object Boolean]")))	{
@@ -76,7 +76,7 @@ class Field{
 
 	/**
 	 * The method to get the webhook
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the webhook
 	 */
 	getWebhook()	{
 		return this.webhook;
@@ -85,7 +85,7 @@ class Field{
 
 	/**
 	 * The method to set the value to webhook
-	 * @param {Boolean} webhook A Boolean
+	 * @param {Boolean} webhook A Boolean representing the webhook
 	 */
 	setWebhook(webhook)	{
 		if((webhook != null) && (!(Object.prototype.toString.call(webhook) == "[object Boolean]")))	{
@@ -144,7 +144,7 @@ class Field{
 
 	/**
 	 * The method to get the content
-	 * @returns {String} A String
+	 * @returns {String} A String representing the content
 	 */
 	getContent()	{
 		return this.content;
@@ -153,7 +153,7 @@ class Field{
 
 	/**
 	 * The method to set the value to content
-	 * @param {String} content A String
+	 * @param {String} content A String representing the content
 	 */
 	setContent(content)	{
 		if((content != null) && (!(Object.prototype.toString.call(content) == "[object String]")))	{
@@ -166,7 +166,7 @@ class Field{
 
 	/**
 	 * The method to get the columnName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the columnName
 	 */
 	getColumnName()	{
 		return this.columnName;
@@ -175,7 +175,7 @@ class Field{
 
 	/**
 	 * The method to set the value to columnName
-	 * @param {String} columnName A String
+	 * @param {String} columnName A String representing the columnName
 	 */
 	setColumnName(columnName)	{
 		if((columnName != null) && (!(Object.prototype.toString.call(columnName) == "[object String]")))	{
@@ -188,7 +188,7 @@ class Field{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -197,7 +197,7 @@ class Field{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -210,7 +210,7 @@ class Field{
 
 	/**
 	 * The method to get the transitionSequence
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the transitionSequence
 	 */
 	getTransitionSequence()	{
 		return this.transitionSequence;
@@ -219,11 +219,11 @@ class Field{
 
 	/**
 	 * The method to set the value to transitionSequence
-	 * @param {Integer} transitionSequence An Integer
+	 * @param {number} transitionSequence A number representing the transitionSequence
 	 */
 	setTransitionSequence(transitionSequence)	{
 		if((transitionSequence != null) && (!(Object.prototype.toString.call(transitionSequence) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: transitionSequence EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: transitionSequence EXPECTED TYPE: number", null, null);
 		}
 		this.transitionSequence = transitionSequence;
 		this.keyModified.set("transition_sequence", 1);
@@ -232,7 +232,7 @@ class Field{
 
 	/**
 	 * The method to get the personalityName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the personalityName
 	 */
 	getPersonalityName()	{
 		return this.personalityName;
@@ -241,7 +241,7 @@ class Field{
 
 	/**
 	 * The method to set the value to personalityName
-	 * @param {String} personalityName A String
+	 * @param {String} personalityName A String representing the personalityName
 	 */
 	setPersonalityName(personalityName)	{
 		if((personalityName != null) && (!(Object.prototype.toString.call(personalityName) == "[object String]")))	{
@@ -254,7 +254,7 @@ class Field{
 
 	/**
 	 * The method to get the message
-	 * @returns {String} A String
+	 * @returns {String} A String representing the message
 	 */
 	getMessage()	{
 		return this.message;
@@ -263,7 +263,7 @@ class Field{
 
 	/**
 	 * The method to set the value to message
-	 * @param {String} message A String
+	 * @param {String} message A String representing the message
 	 */
 	setMessage(message)	{
 		if((message != null) && (!(Object.prototype.toString.call(message) == "[object String]")))	{
@@ -276,7 +276,7 @@ class Field{
 
 	/**
 	 * The method to get the mandatory
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the mandatory
 	 */
 	getMandatory()	{
 		return this.mandatory;
@@ -285,7 +285,7 @@ class Field{
 
 	/**
 	 * The method to set the value to mandatory
-	 * @param {Boolean} mandatory A Boolean
+	 * @param {Boolean} mandatory A Boolean representing the mandatory
 	 */
 	setMandatory(mandatory)	{
 		if((mandatory != null) && (!(Object.prototype.toString.call(mandatory) == "[object Boolean]")))	{
@@ -344,7 +344,7 @@ class Field{
 
 	/**
 	 * The method to get the jsonType
-	 * @returns {String} A String
+	 * @returns {String} A String representing the jsonType
 	 */
 	getJsonType()	{
 		return this.jsonType;
@@ -353,7 +353,7 @@ class Field{
 
 	/**
 	 * The method to set the value to jsonType
-	 * @param {String} jsonType A String
+	 * @param {String} jsonType A String representing the jsonType
 	 */
 	setJsonType(jsonType)	{
 		if((jsonType != null) && (!(Object.prototype.toString.call(jsonType) == "[object String]")))	{
@@ -389,7 +389,7 @@ class Field{
 
 	/**
 	 * The method to get the fieldLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fieldLabel
 	 */
 	getFieldLabel()	{
 		return this.fieldLabel;
@@ -398,7 +398,7 @@ class Field{
 
 	/**
 	 * The method to set the value to fieldLabel
-	 * @param {String} fieldLabel A String
+	 * @param {String} fieldLabel A String representing the fieldLabel
 	 */
 	setFieldLabel(fieldLabel)	{
 		if((fieldLabel != null) && (!(Object.prototype.toString.call(fieldLabel) == "[object String]")))	{
@@ -434,7 +434,7 @@ class Field{
 
 	/**
 	 * The method to get the createdSource
-	 * @returns {String} A String
+	 * @returns {String} A String representing the createdSource
 	 */
 	getCreatedSource()	{
 		return this.createdSource;
@@ -443,7 +443,7 @@ class Field{
 
 	/**
 	 * The method to set the value to createdSource
-	 * @param {String} createdSource A String
+	 * @param {String} createdSource A String representing the createdSource
 	 */
 	setCreatedSource(createdSource)	{
 		if((createdSource != null) && (!(Object.prototype.toString.call(createdSource) == "[object String]")))	{
@@ -456,7 +456,7 @@ class Field{
 
 	/**
 	 * The method to get the fieldReadOnly
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the fieldReadOnly
 	 */
 	getFieldReadOnly()	{
 		return this.fieldReadOnly;
@@ -465,7 +465,7 @@ class Field{
 
 	/**
 	 * The method to set the value to fieldReadOnly
-	 * @param {Boolean} fieldReadOnly A Boolean
+	 * @param {Boolean} fieldReadOnly A Boolean representing the fieldReadOnly
 	 */
 	setFieldReadOnly(fieldReadOnly)	{
 		if((fieldReadOnly != null) && (!(Object.prototype.toString.call(fieldReadOnly) == "[object Boolean]")))	{
@@ -478,7 +478,7 @@ class Field{
 
 	/**
 	 * The method to get the displayLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayLabel
 	 */
 	getDisplayLabel()	{
 		return this.displayLabel;
@@ -487,7 +487,7 @@ class Field{
 
 	/**
 	 * The method to set the value to displayLabel
-	 * @param {String} displayLabel A String
+	 * @param {String} displayLabel A String representing the displayLabel
 	 */
 	setDisplayLabel(displayLabel)	{
 		if((displayLabel != null) && (!(Object.prototype.toString.call(displayLabel) == "[object String]")))	{
@@ -500,7 +500,7 @@ class Field{
 
 	/**
 	 * The method to get the readOnly
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the readOnly
 	 */
 	getReadOnly()	{
 		return this.readOnly;
@@ -509,7 +509,7 @@ class Field{
 
 	/**
 	 * The method to set the value to readOnly
-	 * @param {Boolean} readOnly A Boolean
+	 * @param {Boolean} readOnly A Boolean representing the readOnly
 	 */
 	setReadOnly(readOnly)	{
 		if((readOnly != null) && (!(Object.prototype.toString.call(readOnly) == "[object Boolean]")))	{
@@ -545,7 +545,7 @@ class Field{
 
 	/**
 	 * The method to get the quickSequenceNumber
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the quickSequenceNumber
 	 */
 	getQuickSequenceNumber()	{
 		return this.quickSequenceNumber;
@@ -554,11 +554,11 @@ class Field{
 
 	/**
 	 * The method to set the value to quickSequenceNumber
-	 * @param {Integer} quickSequenceNumber An Integer
+	 * @param {number} quickSequenceNumber A number representing the quickSequenceNumber
 	 */
 	setQuickSequenceNumber(quickSequenceNumber)	{
 		if((quickSequenceNumber != null) && (!(Object.prototype.toString.call(quickSequenceNumber) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: quickSequenceNumber EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: quickSequenceNumber EXPECTED TYPE: number", null, null);
 		}
 		this.quickSequenceNumber = quickSequenceNumber;
 		this.keyModified.set("quick_sequence_number", 1);
@@ -567,7 +567,7 @@ class Field{
 
 	/**
 	 * The method to get the businesscardSupported
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the businesscardSupported
 	 */
 	getBusinesscardSupported()	{
 		return this.businesscardSupported;
@@ -576,7 +576,7 @@ class Field{
 
 	/**
 	 * The method to set the value to businesscardSupported
-	 * @param {Boolean} businesscardSupported A Boolean
+	 * @param {Boolean} businesscardSupported A Boolean representing the businesscardSupported
 	 */
 	setBusinesscardSupported(businesscardSupported)	{
 		if((businesscardSupported != null) && (!(Object.prototype.toString.call(businesscardSupported) == "[object Boolean]")))	{
@@ -589,7 +589,7 @@ class Field{
 
 	/**
 	 * The method to get the multiModuleLookup
-	 * @returns {Map} A Map
+	 * @returns {Map} A Map representing the multiModuleLookup
 	 */
 	getMultiModuleLookup()	{
 		return this.multiModuleLookup;
@@ -598,7 +598,7 @@ class Field{
 
 	/**
 	 * The method to set the value to multiModuleLookup
-	 * @param {Map} multiModuleLookup A Map
+	 * @param {Map} multiModuleLookup A Map representing the multiModuleLookup
 	 */
 	setMultiModuleLookup(multiModuleLookup)	{
 		if((multiModuleLookup != null) && (!(Object.prototype.toString.call(multiModuleLookup) == "[object Map]")))	{
@@ -634,7 +634,7 @@ class Field{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -643,7 +643,7 @@ class Field{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -656,7 +656,7 @@ class Field{
 
 	/**
 	 * The method to get the customField
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the customField
 	 */
 	getCustomField()	{
 		return this.customField;
@@ -665,7 +665,7 @@ class Field{
 
 	/**
 	 * The method to set the value to customField
-	 * @param {Boolean} customField A Boolean
+	 * @param {Boolean} customField A Boolean representing the customField
 	 */
 	setCustomField(customField)	{
 		if((customField != null) && (!(Object.prototype.toString.call(customField) == "[object Boolean]")))	{
@@ -701,7 +701,7 @@ class Field{
 
 	/**
 	 * The method to get the visible
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the visible
 	 */
 	getVisible()	{
 		return this.visible;
@@ -710,7 +710,7 @@ class Field{
 
 	/**
 	 * The method to set the value to visible
-	 * @param {Boolean} visible A Boolean
+	 * @param {Boolean} visible A Boolean representing the visible
 	 */
 	setVisible(visible)	{
 		if((visible != null) && (!(Object.prototype.toString.call(visible) == "[object Boolean]")))	{
@@ -723,7 +723,7 @@ class Field{
 
 	/**
 	 * The method to get the length
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the length
 	 */
 	getLength()	{
 		return this.length;
@@ -732,11 +732,11 @@ class Field{
 
 	/**
 	 * The method to set the value to length
-	 * @param {Integer} length An Integer
+	 * @param {number} length A number representing the length
 	 */
 	setLength(length)	{
 		if((length != null) && (!(Object.prototype.toString.call(length) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: length EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: length EXPECTED TYPE: number", null, null);
 		}
 		this.length = length;
 		this.keyModified.set("length", 1);
@@ -791,7 +791,7 @@ class Field{
 
 	/**
 	 * The method to get the apiName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the apiName
 	 */
 	getAPIName()	{
 		return this.apiName;
@@ -800,7 +800,7 @@ class Field{
 
 	/**
 	 * The method to set the value to apiName
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 */
 	setAPIName(apiName)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -836,7 +836,7 @@ class Field{
 
 	/**
 	 * The method to get the historyTracking
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the historyTracking
 	 */
 	getHistoryTracking()	{
 		return this.historyTracking;
@@ -845,7 +845,7 @@ class Field{
 
 	/**
 	 * The method to set the value to historyTracking
-	 * @param {Boolean} historyTracking A Boolean
+	 * @param {Boolean} historyTracking A Boolean representing the historyTracking
 	 */
 	setHistoryTracking(historyTracking)	{
 		if((historyTracking != null) && (!(Object.prototype.toString.call(historyTracking) == "[object Boolean]")))	{
@@ -858,7 +858,7 @@ class Field{
 
 	/**
 	 * The method to get the dataType
-	 * @returns {String} A String
+	 * @returns {String} A String representing the dataType
 	 */
 	getDataType()	{
 		return this.dataType;
@@ -867,7 +867,7 @@ class Field{
 
 	/**
 	 * The method to set the value to dataType
-	 * @param {String} dataType A String
+	 * @param {String} dataType A String representing the dataType
 	 */
 	setDataType(dataType)	{
 		if((dataType != null) && (!(Object.prototype.toString.call(dataType) == "[object String]")))	{
@@ -903,7 +903,7 @@ class Field{
 
 	/**
 	 * The method to get the decimalPlace
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the decimalPlace
 	 */
 	getDecimalPlace()	{
 		return this.decimalPlace;
@@ -912,11 +912,11 @@ class Field{
 
 	/**
 	 * The method to set the value to decimalPlace
-	 * @param {Integer} decimalPlace An Integer
+	 * @param {number} decimalPlace A number representing the decimalPlace
 	 */
 	setDecimalPlace(decimalPlace)	{
 		if((decimalPlace != null) && (!(Object.prototype.toString.call(decimalPlace) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: decimalPlace EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: decimalPlace EXPECTED TYPE: number", null, null);
 		}
 		this.decimalPlace = decimalPlace;
 		this.keyModified.set("decimal_place", 1);
@@ -925,7 +925,7 @@ class Field{
 
 	/**
 	 * The method to get the massUpdate
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the massUpdate
 	 */
 	getMassUpdate()	{
 		return this.massUpdate;
@@ -934,7 +934,7 @@ class Field{
 
 	/**
 	 * The method to set the value to massUpdate
-	 * @param {Boolean} massUpdate A Boolean
+	 * @param {Boolean} massUpdate A Boolean representing the massUpdate
 	 */
 	setMassUpdate(massUpdate)	{
 		if((massUpdate != null) && (!(Object.prototype.toString.call(massUpdate) == "[object Boolean]")))	{
@@ -947,7 +947,7 @@ class Field{
 
 	/**
 	 * The method to get the blueprintSupported
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the blueprintSupported
 	 */
 	getBlueprintSupported()	{
 		return this.blueprintSupported;
@@ -956,7 +956,7 @@ class Field{
 
 	/**
 	 * The method to set the value to blueprintSupported
-	 * @param {Boolean} blueprintSupported A Boolean
+	 * @param {Boolean} blueprintSupported A Boolean representing the blueprintSupported
 	 */
 	setBlueprintSupported(blueprintSupported)	{
 		if((blueprintSupported != null) && (!(Object.prototype.toString.call(blueprintSupported) == "[object Boolean]")))	{
@@ -992,7 +992,7 @@ class Field{
 
 	/**
 	 * The method to get the pickListValues
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the pickListValues
 	 */
 	getPickListValues()	{
 		return this.pickListValues;
@@ -1001,7 +1001,7 @@ class Field{
 
 	/**
 	 * The method to set the value to pickListValues
-	 * @param {Array} pickListValues An Array
+	 * @param {Array} pickListValues An Array representing the pickListValues
 	 */
 	setPickListValues(pickListValues)	{
 		if((pickListValues != null) && (!(Object.prototype.toString.call(pickListValues) == "[object Array]")))	{
@@ -1037,7 +1037,7 @@ class Field{
 
 	/**
 	 * The method to get the defaultValue
-	 * @returns {String} A String
+	 * @returns {String} A String representing the defaultValue
 	 */
 	getDefaultValue()	{
 		return this.defaultValue;
@@ -1046,7 +1046,7 @@ class Field{
 
 	/**
 	 * The method to set the value to defaultValue
-	 * @param {String} defaultValue A String
+	 * @param {String} defaultValue A String representing the defaultValue
 	 */
 	setDefaultValue(defaultValue)	{
 		if((defaultValue != null) && (!(Object.prototype.toString.call(defaultValue) == "[object String]")))	{
@@ -1059,7 +1059,7 @@ class Field{
 
 	/**
 	 * The method to get the sectionId
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the sectionId
 	 */
 	getSectionId()	{
 		return this.sectionId;
@@ -1068,11 +1068,11 @@ class Field{
 
 	/**
 	 * The method to set the value to sectionId
-	 * @param {Integer} sectionId An Integer
+	 * @param {number} sectionId A number representing the sectionId
 	 */
 	setSectionId(sectionId)	{
 		if((sectionId != null) && (!(Object.prototype.toString.call(sectionId) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: sectionId EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: sectionId EXPECTED TYPE: number", null, null);
 		}
 		this.sectionId = sectionId;
 		this.keyModified.set("section_id", 1);
@@ -1081,7 +1081,7 @@ class Field{
 
 	/**
 	 * The method to get the validationRule
-	 * @returns {Map} A Map
+	 * @returns {Map} A Map representing the validationRule
 	 */
 	getValidationRule()	{
 		return this.validationRule;
@@ -1090,7 +1090,7 @@ class Field{
 
 	/**
 	 * The method to set the value to validationRule
-	 * @param {Map} validationRule A Map
+	 * @param {Map} validationRule A Map representing the validationRule
 	 */
 	setValidationRule(validationRule)	{
 		if((validationRule != null) && (!(Object.prototype.toString.call(validationRule) == "[object Map]")))	{
@@ -1103,7 +1103,7 @@ class Field{
 
 	/**
 	 * The method to get the convertMapping
-	 * @returns {Map} A Map
+	 * @returns {Map} A Map representing the convertMapping
 	 */
 	getConvertMapping()	{
 		return this.convertMapping;
@@ -1112,7 +1112,7 @@ class Field{
 
 	/**
 	 * The method to set the value to convertMapping
-	 * @param {Map} convertMapping A Map
+	 * @param {Map} convertMapping A Map representing the convertMapping
 	 */
 	setConvertMapping(convertMapping)	{
 		if((convertMapping != null) && (!(Object.prototype.toString.call(convertMapping) == "[object Map]")))	{
@@ -1125,8 +1125,8 @@ class Field{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -1141,15 +1141,15 @@ class Field{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

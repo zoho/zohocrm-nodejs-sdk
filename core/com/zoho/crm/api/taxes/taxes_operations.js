@@ -97,7 +97,7 @@ class TaxesOperations{
 
 	/**
 	 * The method to get tax
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -119,7 +119,7 @@ class TaxesOperations{
 
 	/**
 	 * The method to delete tax
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

@@ -17,7 +17,7 @@ class ProcessInfo{
 	keyModified = new Map();
 	/**
 	 * The method to get the fieldId
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fieldId
 	 */
 	getFieldId()	{
 		return this.fieldId;
@@ -26,7 +26,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to fieldId
-	 * @param {String} fieldId A String
+	 * @param {String} fieldId A String representing the fieldId
 	 */
 	setFieldId(fieldId)	{
 		if((fieldId != null) && (!(Object.prototype.toString.call(fieldId) == "[object String]")))	{
@@ -39,7 +39,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the isContinuous
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the isContinuous
 	 */
 	getIsContinuous()	{
 		return this.isContinuous;
@@ -48,7 +48,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to isContinuous
-	 * @param {Boolean} isContinuous A Boolean
+	 * @param {Boolean} isContinuous A Boolean representing the isContinuous
 	 */
 	setIsContinuous(isContinuous)	{
 		if((isContinuous != null) && (!(Object.prototype.toString.call(isContinuous) == "[object Boolean]")))	{
@@ -61,7 +61,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the apiName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the apiName
 	 */
 	getAPIName()	{
 		return this.apiName;
@@ -70,7 +70,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to apiName
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 */
 	setAPIName(apiName)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -83,7 +83,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the continuous
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the continuous
 	 */
 	getContinuous()	{
 		return this.continuous;
@@ -92,7 +92,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to continuous
-	 * @param {Boolean} continuous A Boolean
+	 * @param {Boolean} continuous A Boolean representing the continuous
 	 */
 	setContinuous(continuous)	{
 		if((continuous != null) && (!(Object.prototype.toString.call(continuous) == "[object Boolean]")))	{
@@ -105,7 +105,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the fieldLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fieldLabel
 	 */
 	getFieldLabel()	{
 		return this.fieldLabel;
@@ -114,7 +114,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to fieldLabel
-	 * @param {String} fieldLabel A String
+	 * @param {String} fieldLabel A String representing the fieldLabel
 	 */
 	setFieldLabel(fieldLabel)	{
 		if((fieldLabel != null) && (!(Object.prototype.toString.call(fieldLabel) == "[object String]")))	{
@@ -127,7 +127,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -136,7 +136,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -149,7 +149,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the columnName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the columnName
 	 */
 	getColumnName()	{
 		return this.columnName;
@@ -158,7 +158,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to columnName
-	 * @param {String} columnName A String
+	 * @param {String} columnName A String representing the columnName
 	 */
 	setColumnName(columnName)	{
 		if((columnName != null) && (!(Object.prototype.toString.call(columnName) == "[object String]")))	{
@@ -171,7 +171,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the fieldValue
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fieldValue
 	 */
 	getFieldValue()	{
 		return this.fieldValue;
@@ -180,7 +180,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to fieldValue
-	 * @param {String} fieldValue A String
+	 * @param {String} fieldValue A String representing the fieldValue
 	 */
 	setFieldValue(fieldValue)	{
 		if((fieldValue != null) && (!(Object.prototype.toString.call(fieldValue) == "[object String]")))	{
@@ -193,7 +193,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -202,7 +202,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -215,7 +215,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the fieldName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the fieldName
 	 */
 	getFieldName()	{
 		return this.fieldName;
@@ -224,7 +224,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to fieldName
-	 * @param {String} fieldName A String
+	 * @param {String} fieldName A String representing the fieldName
 	 */
 	setFieldName(fieldName)	{
 		if((fieldName != null) && (!(Object.prototype.toString.call(fieldName) == "[object String]")))	{
@@ -237,7 +237,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to get the escalation
-	 * @returns {String} A String
+	 * @returns {String} A String representing the escalation
 	 */
 	getEscalation()	{
 		return this.escalation;
@@ -246,7 +246,7 @@ class ProcessInfo{
 
 	/**
 	 * The method to set the value to escalation
-	 * @param {String} escalation A String
+	 * @param {String} escalation A String representing the escalation
 	 */
 	setEscalation(escalation)	{
 		if((escalation != null) && (!(Object.prototype.toString.call(escalation) == "[object String]")))	{
@@ -259,8 +259,8 @@ class ProcessInfo{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -275,15 +275,15 @@ class ProcessInfo{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

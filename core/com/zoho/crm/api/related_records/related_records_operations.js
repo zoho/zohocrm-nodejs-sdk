@@ -15,9 +15,9 @@ class RelatedRecordsOperations{
 	relatedListAPIName;
 	/**
 	 * Creates an instance of RelatedRecordsOperations with the given parameters
-	 * @param {String} relatedListAPIName A String
-	 * @param {BigInt} recordId A BigInt
-	 * @param {String} moduleAPIName A String
+	 * @param {String} relatedListAPIName A String representing the relatedListAPIName
+	 * @param {BigInt} recordId A BigInt representing the recordId
+	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 */
 	constructor(relatedListAPIName, recordId, moduleAPIName){
 		if((!(Object.prototype.toString.call(relatedListAPIName) == "[object String]")))	{
@@ -128,7 +128,7 @@ class RelatedRecordsOperations{
 
 	/**
 	 * The method to get related record
-	 * @param {BigInt} relatedRecordId A BigInt
+	 * @param {BigInt} relatedRecordId A BigInt representing the relatedRecordId
 	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -162,7 +162,7 @@ class RelatedRecordsOperations{
 
 	/**
 	 * The method to update related record
-	 * @param {BigInt} relatedRecordId A BigInt
+	 * @param {BigInt} relatedRecordId A BigInt representing the relatedRecordId
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -198,7 +198,7 @@ class RelatedRecordsOperations{
 
 	/**
 	 * The method to delink record
-	 * @param {BigInt} relatedRecordId A BigInt
+	 * @param {BigInt} relatedRecordId A BigInt representing the relatedRecordId
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */

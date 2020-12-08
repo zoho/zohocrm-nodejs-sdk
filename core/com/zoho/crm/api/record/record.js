@@ -7,7 +7,7 @@ class Record{
 	keyModified = new Map();
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.getKeyValue("id");
@@ -16,7 +16,7 @@ class Record{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -114,7 +114,7 @@ class Record{
 
 	/**
 	 * The method to get the tag
-	 * @returns {Array} An Array
+	 * @returns {Array} An Array representing the tag
 	 */
 	getTag()	{
 		return this.getKeyValue("Tag");
@@ -123,7 +123,7 @@ class Record{
 
 	/**
 	 * The method to set the value to tag
-	 * @param {Array} tag An Array
+	 * @param {Array} tag An Array representing the tag
 	 */
 	setTag(tag)	{
 		if((tag != null) && (!(Object.prototype.toString.call(tag) == "[object Array]")))	{
@@ -149,8 +149,8 @@ class Record{
 
 	/**
 	 * The method to add key value
-	 * @param {String} apiName A String
-	 * @param {Object} value An Object
+	 * @param {String} apiName A String representing the apiName
+	 * @param {Object} value An Object representing the value
 	 */
 	addKeyValue(apiName, value)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -163,8 +163,8 @@ class Record{
 
 	/**
 	 * The method to get key value
-	 * @param {String} apiName A String
-	 * @returns {Object} An Object
+	 * @param {String} apiName A String representing the apiName
+	 * @returns {Object} An Object representing the keyValue
 	 */
 	getKeyValue(apiName)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -179,7 +179,7 @@ class Record{
 
 	/**
 	 * The method to get key values
-	 * @returns {Map} A Map
+	 * @returns {Map} A Map representing the keyValues
 	 */
 	getKeyValues()	{
 		return this.keyValues;
@@ -188,8 +188,8 @@ class Record{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -204,15 +204,15 @@ class Record{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

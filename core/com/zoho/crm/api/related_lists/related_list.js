@@ -17,7 +17,7 @@ class RelatedList{
 	keyModified = new Map();
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -26,7 +26,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -39,7 +39,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the sequenceNumber
-	 * @returns {String} A String
+	 * @returns {String} A String representing the sequenceNumber
 	 */
 	getSequenceNumber()	{
 		return this.sequenceNumber;
@@ -48,7 +48,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to sequenceNumber
-	 * @param {String} sequenceNumber A String
+	 * @param {String} sequenceNumber A String representing the sequenceNumber
 	 */
 	setSequenceNumber(sequenceNumber)	{
 		if((sequenceNumber != null) && (!(Object.prototype.toString.call(sequenceNumber) == "[object String]")))	{
@@ -61,7 +61,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the displayLabel
-	 * @returns {String} A String
+	 * @returns {String} A String representing the displayLabel
 	 */
 	getDisplayLabel()	{
 		return this.displayLabel;
@@ -70,7 +70,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to displayLabel
-	 * @param {String} displayLabel A String
+	 * @param {String} displayLabel A String representing the displayLabel
 	 */
 	setDisplayLabel(displayLabel)	{
 		if((displayLabel != null) && (!(Object.prototype.toString.call(displayLabel) == "[object String]")))	{
@@ -83,7 +83,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the apiName
-	 * @returns {String} A String
+	 * @returns {String} A String representing the apiName
 	 */
 	getAPIName()	{
 		return this.apiName;
@@ -92,7 +92,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to apiName
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 */
 	setAPIName(apiName)	{
 		if((apiName != null) && (!(Object.prototype.toString.call(apiName) == "[object String]")))	{
@@ -105,7 +105,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the module
-	 * @returns {String} A String
+	 * @returns {String} A String representing the module
 	 */
 	getModule()	{
 		return this.module;
@@ -114,7 +114,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to module
-	 * @param {String} module A String
+	 * @param {String} module A String representing the module
 	 */
 	setModule(module)	{
 		if((module != null) && (!(Object.prototype.toString.call(module) == "[object String]")))	{
@@ -127,7 +127,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the name
-	 * @returns {String} A String
+	 * @returns {String} A String representing the name
 	 */
 	getName()	{
 		return this.name;
@@ -136,7 +136,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to name
-	 * @param {String} name A String
+	 * @param {String} name A String representing the name
 	 */
 	setName(name)	{
 		if((name != null) && (!(Object.prototype.toString.call(name) == "[object String]")))	{
@@ -149,7 +149,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the action
-	 * @returns {String} A String
+	 * @returns {String} A String representing the action
 	 */
 	getAction()	{
 		return this.action;
@@ -158,7 +158,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to action
-	 * @param {String} action A String
+	 * @param {String} action A String representing the action
 	 */
 	setAction(action)	{
 		if((action != null) && (!(Object.prototype.toString.call(action) == "[object String]")))	{
@@ -171,7 +171,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the href
-	 * @returns {String} A String
+	 * @returns {String} A String representing the href
 	 */
 	getHref()	{
 		return this.href;
@@ -180,7 +180,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to href
-	 * @param {String} href A String
+	 * @param {String} href A String representing the href
 	 */
 	setHref(href)	{
 		if((href != null) && (!(Object.prototype.toString.call(href) == "[object String]")))	{
@@ -193,7 +193,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the type
-	 * @returns {String} A String
+	 * @returns {String} A String representing the type
 	 */
 	getType()	{
 		return this.type;
@@ -202,7 +202,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to type
-	 * @param {String} type A String
+	 * @param {String} type A String representing the type
 	 */
 	setType(type)	{
 		if((type != null) && (!(Object.prototype.toString.call(type) == "[object String]")))	{
@@ -215,7 +215,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the connectedmodule
-	 * @returns {String} A String
+	 * @returns {String} A String representing the connectedmodule
 	 */
 	getConnectedmodule()	{
 		return this.connectedmodule;
@@ -224,7 +224,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to connectedmodule
-	 * @param {String} connectedmodule A String
+	 * @param {String} connectedmodule A String representing the connectedmodule
 	 */
 	setConnectedmodule(connectedmodule)	{
 		if((connectedmodule != null) && (!(Object.prototype.toString.call(connectedmodule) == "[object String]")))	{
@@ -237,7 +237,7 @@ class RelatedList{
 
 	/**
 	 * The method to get the linkingmodule
-	 * @returns {String} A String
+	 * @returns {String} A String representing the linkingmodule
 	 */
 	getLinkingmodule()	{
 		return this.linkingmodule;
@@ -246,7 +246,7 @@ class RelatedList{
 
 	/**
 	 * The method to set the value to linkingmodule
-	 * @param {String} linkingmodule A String
+	 * @param {String} linkingmodule A String representing the linkingmodule
 	 */
 	setLinkingmodule(linkingmodule)	{
 		if((linkingmodule != null) && (!(Object.prototype.toString.call(linkingmodule) == "[object String]")))	{
@@ -259,8 +259,8 @@ class RelatedList{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -275,15 +275,15 @@ class RelatedList{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

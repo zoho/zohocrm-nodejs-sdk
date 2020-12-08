@@ -9,7 +9,7 @@ class SuccessfulConvert{
 	keyModified = new Map();
 	/**
 	 * The method to get the contacts
-	 * @returns {String} A String
+	 * @returns {String} A String representing the contacts
 	 */
 	getContacts()	{
 		return this.contacts;
@@ -18,7 +18,7 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to set the value to contacts
-	 * @param {String} contacts A String
+	 * @param {String} contacts A String representing the contacts
 	 */
 	setContacts(contacts)	{
 		if((contacts != null) && (!(Object.prototype.toString.call(contacts) == "[object String]")))	{
@@ -31,7 +31,7 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to get the deals
-	 * @returns {String} A String
+	 * @returns {String} A String representing the deals
 	 */
 	getDeals()	{
 		return this.deals;
@@ -40,7 +40,7 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to set the value to deals
-	 * @param {String} deals A String
+	 * @param {String} deals A String representing the deals
 	 */
 	setDeals(deals)	{
 		if((deals != null) && (!(Object.prototype.toString.call(deals) == "[object String]")))	{
@@ -53,7 +53,7 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to get the accounts
-	 * @returns {String} A String
+	 * @returns {String} A String representing the accounts
 	 */
 	getAccounts()	{
 		return this.accounts;
@@ -62,7 +62,7 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to set the value to accounts
-	 * @param {String} accounts A String
+	 * @param {String} accounts A String representing the accounts
 	 */
 	setAccounts(accounts)	{
 		if((accounts != null) && (!(Object.prototype.toString.call(accounts) == "[object String]")))	{
@@ -75,8 +75,8 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -91,15 +91,15 @@ class SuccessfulConvert{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

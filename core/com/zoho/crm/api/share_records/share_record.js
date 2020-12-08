@@ -12,7 +12,7 @@ class ShareRecord{
 	keyModified = new Map();
 	/**
 	 * The method to get the shareRelatedRecords
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the shareRelatedRecords
 	 */
 	getShareRelatedRecords()	{
 		return this.shareRelatedRecords;
@@ -21,7 +21,7 @@ class ShareRecord{
 
 	/**
 	 * The method to set the value to shareRelatedRecords
-	 * @param {Boolean} shareRelatedRecords A Boolean
+	 * @param {Boolean} shareRelatedRecords A Boolean representing the shareRelatedRecords
 	 */
 	setShareRelatedRecords(shareRelatedRecords)	{
 		if((shareRelatedRecords != null) && (!(Object.prototype.toString.call(shareRelatedRecords) == "[object Boolean]")))	{
@@ -79,7 +79,7 @@ class ShareRecord{
 
 	/**
 	 * The method to get the permission
-	 * @returns {String} A String
+	 * @returns {String} A String representing the permission
 	 */
 	getPermission()	{
 		return this.permission;
@@ -88,7 +88,7 @@ class ShareRecord{
 
 	/**
 	 * The method to set the value to permission
-	 * @param {String} permission A String
+	 * @param {String} permission A String representing the permission
 	 */
 	setPermission(permission)	{
 		if((permission != null) && (!(Object.prototype.toString.call(permission) == "[object String]")))	{
@@ -147,8 +147,8 @@ class ShareRecord{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -163,15 +163,15 @@ class ShareRecord{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

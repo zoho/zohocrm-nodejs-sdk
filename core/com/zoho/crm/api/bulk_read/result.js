@@ -11,7 +11,7 @@ class Result{
 	keyModified = new Map();
 	/**
 	 * The method to get the page
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the page
 	 */
 	getPage()	{
 		return this.page;
@@ -20,11 +20,11 @@ class Result{
 
 	/**
 	 * The method to set the value to page
-	 * @param {Integer} page An Integer
+	 * @param {number} page A number representing the page
 	 */
 	setPage(page)	{
 		if((page != null) && (!(Object.prototype.toString.call(page) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: page EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: page EXPECTED TYPE: number", null, null);
 		}
 		this.page = page;
 		this.keyModified.set("page", 1);
@@ -33,7 +33,7 @@ class Result{
 
 	/**
 	 * The method to get the count
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the count
 	 */
 	getCount()	{
 		return this.count;
@@ -42,11 +42,11 @@ class Result{
 
 	/**
 	 * The method to set the value to count
-	 * @param {Integer} count An Integer
+	 * @param {number} count A number representing the count
 	 */
 	setCount(count)	{
 		if((count != null) && (!(Object.prototype.toString.call(count) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: count EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: count EXPECTED TYPE: number", null, null);
 		}
 		this.count = count;
 		this.keyModified.set("count", 1);
@@ -55,7 +55,7 @@ class Result{
 
 	/**
 	 * The method to get the downloadUrl
-	 * @returns {String} A String
+	 * @returns {String} A String representing the downloadUrl
 	 */
 	getDownloadUrl()	{
 		return this.downloadUrl;
@@ -64,7 +64,7 @@ class Result{
 
 	/**
 	 * The method to set the value to downloadUrl
-	 * @param {String} downloadUrl A String
+	 * @param {String} downloadUrl A String representing the downloadUrl
 	 */
 	setDownloadUrl(downloadUrl)	{
 		if((downloadUrl != null) && (!(Object.prototype.toString.call(downloadUrl) == "[object String]")))	{
@@ -77,7 +77,7 @@ class Result{
 
 	/**
 	 * The method to get the perPage
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the perPage
 	 */
 	getPerPage()	{
 		return this.perPage;
@@ -86,11 +86,11 @@ class Result{
 
 	/**
 	 * The method to set the value to perPage
-	 * @param {Integer} perPage An Integer
+	 * @param {number} perPage A number representing the perPage
 	 */
 	setPerPage(perPage)	{
 		if((perPage != null) && (!(Object.prototype.toString.call(perPage) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: perPage EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: perPage EXPECTED TYPE: number", null, null);
 		}
 		this.perPage = perPage;
 		this.keyModified.set("per_page", 1);
@@ -99,7 +99,7 @@ class Result{
 
 	/**
 	 * The method to get the moreRecords
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the moreRecords
 	 */
 	getMoreRecords()	{
 		return this.moreRecords;
@@ -108,7 +108,7 @@ class Result{
 
 	/**
 	 * The method to set the value to moreRecords
-	 * @param {Boolean} moreRecords A Boolean
+	 * @param {Boolean} moreRecords A Boolean representing the moreRecords
 	 */
 	setMoreRecords(moreRecords)	{
 		if((moreRecords != null) && (!(Object.prototype.toString.call(moreRecords) == "[object Boolean]")))	{
@@ -121,8 +121,8 @@ class Result{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -137,15 +137,15 @@ class Result{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

@@ -10,7 +10,7 @@ class Comment{
 	keyModified = new Map();
 	/**
 	 * The method to get the commentedBy
-	 * @returns {String} A String
+	 * @returns {String} A String representing the commentedBy
 	 */
 	getCommentedBy()	{
 		return this.commentedBy;
@@ -19,7 +19,7 @@ class Comment{
 
 	/**
 	 * The method to set the value to commentedBy
-	 * @param {String} commentedBy A String
+	 * @param {String} commentedBy A String representing the commentedBy
 	 */
 	setCommentedBy(commentedBy)	{
 		if((commentedBy != null) && (!(Object.prototype.toString.call(commentedBy) == "[object String]")))	{
@@ -54,7 +54,7 @@ class Comment{
 
 	/**
 	 * The method to get the commentContent
-	 * @returns {String} A String
+	 * @returns {String} A String representing the commentContent
 	 */
 	getCommentContent()	{
 		return this.commentContent;
@@ -63,7 +63,7 @@ class Comment{
 
 	/**
 	 * The method to set the value to commentContent
-	 * @param {String} commentContent A String
+	 * @param {String} commentContent A String representing the commentContent
 	 */
 	setCommentContent(commentContent)	{
 		if((commentContent != null) && (!(Object.prototype.toString.call(commentContent) == "[object String]")))	{
@@ -76,7 +76,7 @@ class Comment{
 
 	/**
 	 * The method to get the id
-	 * @returns {BigInt} A BigInt
+	 * @returns {BigInt} A BigInt representing the id
 	 */
 	getId()	{
 		return this.id;
@@ -85,7 +85,7 @@ class Comment{
 
 	/**
 	 * The method to set the value to id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 */
 	setId(id)	{
 		if((id != null) && (!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
@@ -98,8 +98,8 @@ class Comment{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -114,15 +114,15 @@ class Comment{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 

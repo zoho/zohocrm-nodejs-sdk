@@ -30,7 +30,7 @@ class ModulesOperations{
 
 	/**
 	 * The method to get module
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
@@ -52,7 +52,7 @@ class ModulesOperations{
 
 	/**
 	 * The method to update module by api name
-	 * @param {String} apiName A String
+	 * @param {String} apiName A String representing the apiName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
@@ -81,7 +81,7 @@ class ModulesOperations{
 
 	/**
 	 * The method to update module by id
-	 * @param {BigInt} id A BigInt
+	 * @param {BigInt} id A BigInt representing the id
 	 * @param {BodyWrapper} request An instance of BodyWrapper
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}

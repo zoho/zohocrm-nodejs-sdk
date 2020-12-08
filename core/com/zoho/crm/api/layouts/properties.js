@@ -9,7 +9,7 @@ class Properties{
 	keyModified = new Map();
 	/**
 	 * The method to get the reorderRows
-	 * @returns {Boolean} A Boolean
+	 * @returns {Boolean} A Boolean representing the reorderRows
 	 */
 	getReorderRows()	{
 		return this.reorderRows;
@@ -18,7 +18,7 @@ class Properties{
 
 	/**
 	 * The method to set the value to reorderRows
-	 * @param {Boolean} reorderRows A Boolean
+	 * @param {Boolean} reorderRows A Boolean representing the reorderRows
 	 */
 	setReorderRows(reorderRows)	{
 		if((reorderRows != null) && (!(Object.prototype.toString.call(reorderRows) == "[object Boolean]")))	{
@@ -54,7 +54,7 @@ class Properties{
 
 	/**
 	 * The method to get the maximumRows
-	 * @returns {Integer} An Integer
+	 * @returns {number} A number representing the maximumRows
 	 */
 	getMaximumRows()	{
 		return this.maximumRows;
@@ -63,11 +63,11 @@ class Properties{
 
 	/**
 	 * The method to set the value to maximumRows
-	 * @param {Integer} maximumRows An Integer
+	 * @param {number} maximumRows A number representing the maximumRows
 	 */
 	setMaximumRows(maximumRows)	{
 		if((maximumRows != null) && (!(Object.prototype.toString.call(maximumRows) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: maximumRows EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: maximumRows EXPECTED TYPE: number", null, null);
 		}
 		this.maximumRows = maximumRows;
 		this.keyModified.set("maximum_rows", 1);
@@ -76,8 +76,8 @@ class Properties{
 
 	/**
 	 * The method to check if the user has modified the given key
-	 * @param {String} key A String
-	 * @returns {Integer} An Integer
+	 * @param {String} key A String representing the key
+	 * @returns {number} A number representing the modification
 	 */
 	isKeyModified(key)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
@@ -92,15 +92,15 @@ class Properties{
 
 	/**
 	 * The method to mark the given key as modified
-	 * @param {String} key A String
-	 * @param {Integer} modification An Integer
+	 * @param {String} key A String representing the key
+	 * @param {number} modification A number representing the modification
 	 */
 	setKeyModified(key, modification)	{
 		if((key != null) && (!(Object.prototype.toString.call(key) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: key EXPECTED TYPE: String", null, null);
 		}
 		if((modification != null) && (!(Object.prototype.toString.call(modification) == "[object Number]")))	{
-			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: Integer", null, null);
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: modification EXPECTED TYPE: number", null, null);
 		}
 		this.keyModified.set(key, modification);
 
