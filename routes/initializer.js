@@ -292,7 +292,7 @@ class Initializer{
 
 		Initializer.initializer =initializer;
 
-		Logger.info(Constants.INITIALIZATION_SWITCHED.concat(Initializer.initializer.toString()))
+		Logger.info(Constants.INITIALIZATION_SWITCHED.concat(await Initializer.initializer.toString()))
 	}
 
 	static async removeUserConfiguration(user, environment){
