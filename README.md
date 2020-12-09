@@ -296,7 +296,7 @@ Before you get started with creating your NodeJS application, you need to regist
 
     /*
      * autoRefreshFields
-     * if true - all the modules' fields will be auto-refreshed in the background, every    hour.
+     * if true - all the modules' fields will be auto-refreshed in the background, every hour.
      * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
      * 
      * pickListValidation
@@ -395,7 +395,7 @@ class Initializer{
 
         /*
      	 * autoRefreshFields
-         * if true - all the modules' fields will be auto-refreshed in the background, every    hour.
+         * if true - all the modules' fields will be auto-refreshed in the background, every hour.
      	 * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
      	 * 
      	 * pickListValidation
@@ -606,7 +606,7 @@ class Record{
 
         /*
         * autoRefreshFields
-        * if true - all the modules' fields will be auto-refreshed in the background, every    hour.
+        * if true - all the modules' fields will be auto-refreshed in the background, every hour.
         * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
         * 
         * pickListValidation
@@ -704,8 +704,7 @@ class Record{
                             let createdBy = record.getCreatedBy();
                             
                             //Check if createdBy is not null
-                            if(createdBy != null)
-                            {
+                            if(createdBy != null){
                                 //Get the ID of the createdBy User
                                 console.log("Record Created By User-ID: " + createdBy.getId());
                                 
@@ -856,7 +855,7 @@ class Record{
 
         /*
         * autoRefreshFields
-        * if true - all the modules' fields will be auto-refreshed in the background, every    hour.
+        * if true - all the modules' fields will be auto-refreshed in the background, every hour.
         * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
         * 
         * pickListValidation
@@ -932,8 +931,7 @@ class Record{
                             let createdBy = record.getCreatedBy();
                             
                             //Check if createdBy is not null
-                            if(createdBy != null)
-                            {
+                            if(createdBy != null){
                                 //Get the ID of the createdBy User
                                 console.log("Record Created By User-ID: " + createdBy.getId());
                                 
