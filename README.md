@@ -433,9 +433,9 @@ class Initializer{
          * 8 -> RequestProxy instance. Default value is null
          */
         // The SDK can be initialized by any of the following methods
-        await Initializer.initialize(user, environment, token, store, sdkConfig, resourcePath)
+        await Initializer.initialize(user, environment, token, tokenstore, sdkConfig, resourcePath)
 
-        await Initializer.initialize(user, environment, token, store, sdkConfig, resourcePath, logger, proxy);
+        await Initializer.initialize(user, environment, token, tokenstore, sdkConfig, resourcePath, logger, proxy);
     }
 }
 
@@ -632,7 +632,7 @@ class Record{
          * 7 -> Logger instance. Default value is null
          * 8 -> RequestProxy instance. Default value is null
          */
-        await Initializer.initialize(user1, environment1, token1, store, sdkConfig, resourcePath, logger);
+        await Initializer.initialize(user1, environment1, token1, tokenstore, sdkConfig, resourcePath, logger);
 
         await Record.getRecords("Leads");
 
@@ -643,8 +643,6 @@ class Record{
         let environment2 = EUDataCenter.SANDBOX();
 
         let token2 = new OAuthToken("clientId2", "clientSecret2", "REFRESH/ GRANT Token", TokenType.REFRESH/TokenType.GRANT, "redirectURL");
-
-        autoRefreshFields = false;
 
         let requestProxy = new RequestProxy("proxyHost", 80, "proxyUser", "password");
 
@@ -880,7 +878,7 @@ class Record{
          * 6 -> resourcePath   
          * 7 -> Logger instance
          */
-        await Initializer.initialize(user, environment, token, store, sdkConfig, resourcePath, logger);
+        await Initializer.initialize(user, environment, token, tokenstore, sdkConfig, resourcePath, logger);
 
         try {
             let moduleAPIName = "Leads";
