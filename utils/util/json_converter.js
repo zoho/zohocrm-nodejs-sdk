@@ -320,24 +320,25 @@ class JSONConverter extends Converter {
 					primaryKeys.set(name, true);
 				}
 			}
+			
+			for (let keyName of Object.keys(classDetail)) {
+	
+				const keyDetail = classDetail[keyName];
+	
+				let name = keyDetail[Constants.NAME];
+	
+				if(keyDetail.hasOwnProperty(Constants.REQUIRED) && keyDetail[Constants.REQUIRED] == true) {
+							
+					requiredKeys.set(name, true);
+				}
+	
+				if(keyDetail.hasOwnProperty(Constants.PRIMARY) && keyDetail[Constants.PRIMARY] == true) {
+	
+					primaryKeys.set(name, true);
+				}
+			}
 		}
 	
-		for (let keyName of Object.keys(classDetail)) {
-
-			const keyDetail = classDetail[keyName];
-
-			let name = keyDetail[Constants.NAME];
-
-			if(keyDetail.hasOwnProperty(Constants.REQUIRED) && keyDetail[Constants.REQUIRED] == true) {
-						
-				requiredKeys.set(name, true);
-			}
-
-			if(keyDetail.hasOwnProperty(Constants.PRIMARY) && keyDetail[Constants.PRIMARY] == true) {
-
-				primaryKeys.set(name, true);
-			}
-		}
 		
 		for(let keyName of Array.from(keyModified.keys())) {
 
@@ -570,7 +571,7 @@ class JSONConverter extends Converter {
 			
 			let keyName = keyDetail.hasOwnProperty(Constants.NAME) ? keyDetail[Constants.NAME] : null;
 
-			if(keyName != null && responseJson.hasOwnProperty(keyName) && responseJson[keyName] != null) {
+			if(keyName != null && responseJson.hasOwnProperty(keyName)) {
 
 				let keyData = responseJson[keyName];
 
