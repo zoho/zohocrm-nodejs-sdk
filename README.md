@@ -1,18 +1,25 @@
 # ZOHO CRM NODEJS SDK
 
 ## Table Of Contents
+
 * [Overview](#overview)
+* [Registering a Zoho Client](#registering-a-zoho-client)
 * [Environmental Setup](#environmental-setup)
+* [Including the SDK in your project](#including-the-sdk-in-your-project)
 * [Persistence](#token-persistence)
+  * [DataBase Persistence](#database-persistence)
+  * [File Persistence](#file-persistence)
+  * [Custom Persistence](#custom-persistence)
 * [Configuration](#configuration)
 * [Initialization](#initializing-the-application)
+* [Class Hierarchy](#class-hierarchy)
 * [Responses And Exceptions](#responses-and-exceptions)
 * [Multi User Support](#multi-user-support-in-the-nodejs-sdk)
 * [Sample Code](#sdk-sample-code)
 
 ## Overview
 
-NodeJS SDK offers a way to create client NodeJS applications that can be integrated with Zoho CRM.
+Zoho CRM NodeJS SDK offers a way to create client NodeJS applications that can be integrated with Zoho CRM.
 
 ## Registering a Zoho Client
 
@@ -66,11 +73,11 @@ Token persistence refers to storing and utilizing the authentication tokens that
 
 ### Table of Contents
 
-- DataBase Persistence
+- [DataBase Persistence](#database-persistence)
 
-- File Persistence
+- [File Persistence](#file-persistence)
 
-- Custom Persistence
+- [Custom Persistence](#custom-persistence)
 
 ### Implementing OAuth Persistence
 
@@ -397,7 +404,7 @@ class Initializer{
      	 * autoRefreshFields
          * if true - all the modules' fields will be auto-refreshed in the background, every hour.
      	 * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
-     	 * 
+     	 *
      	 * pickListValidation
          * A boolean field that validates user input for a pick list field and allows or disallows the addition of a new value to the list.
          * if true - the SDK validates the input. If the value does not exist in the pick list, the SDK throws an error.
@@ -406,7 +413,7 @@ class Initializer{
     	let sdkConfig = new SDKConfigBuilder().setPickListValidation(false).setAutoRefreshFields(true).build();
 
         /*
-         * The path containing the absolute directory path to store user specific JSON files containing module fields information. 
+         * The path containing the absolute directory path to store user specific JSON files containing module fields information.
          */
         let resourcePath = "/Users/user_name/Documents/nodejssdk-application";
 
@@ -428,7 +435,7 @@ class Initializer{
          * 3 -> Token instance
          * 4 -> TokenStore instance
          * 5 -> SDKConfig instance
-         * 6 -> resourcePath   
+         * 6 -> resourcePath
          * 7 -> Logger instance. Default value is null
          * 8 -> RequestProxy instance. Default value is null
          */
@@ -608,7 +615,7 @@ class Record{
         * autoRefreshFields
         * if true - all the modules' fields will be auto-refreshed in the background, every hour.
         * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
-        * 
+        *
         * pickListValidation
         * A boolean field that validates user input for a pick list field and allows or disallows the addition of a new value to the list.
         * True - the SDK validates the input. If the value does not exist in the pick list, the SDK throws an error.
@@ -617,7 +624,7 @@ class Record{
         let sdkConfig = new SDKConfigBuilder().setPickListValidation(false).setAutoRefreshFields(true).build();
 
         /*
-         * The path containing the absolute directory path to store user specific JSON files containing module fields information. 
+         * The path containing the absolute directory path to store user specific JSON files containing module fields information.
          */
         let resourcePath = "/Users/user_name/Documents/nodejs-app";
 
@@ -628,7 +635,7 @@ class Record{
          * 3 -> Token instance
          * 4 -> TokenStore instance
          * 5 -> SDKConfig instance
-         * 6 -> resourcePath   
+         * 6 -> resourcePath
          * 7 -> Logger instance. Default value is null
          * 8 -> RequestProxy instance. Default value is null
          */
@@ -655,10 +662,10 @@ class Record{
 
     static async getRecords(moduleAPIName){
         try {
-    
+
             //Get instance of RecordOperations Class
             let recordOperations = new RecordOperations();
-    
+
             let paramInstance = new ParameterMap();
     
             await paramInstance.add(GetRecordsParam.APPROVED, "both");

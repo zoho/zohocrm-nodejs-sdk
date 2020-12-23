@@ -3,7 +3,6 @@ const Constants = require("../../utils/util/constants").Constants;
 const got = require("got");
 const Logger = require("winston");
 const tunnel = require("tunnel");
-const user = require("../../core/com/zoho/crm/api/users/user");
 const Initializer = require("../initializer").Initializer;
 
 /**

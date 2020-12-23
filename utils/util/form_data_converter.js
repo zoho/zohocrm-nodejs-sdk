@@ -148,7 +148,7 @@ class FormDataConverter extends Converter{
         var requestObject = fieldValue;
 
         if (memberDetail == null){
-            for (let key of Array.from(requestObject.keys()).length){
+            for (let key of Array.from(requestObject.keys())){
                 jsonObject[key] = this.redirectorForObjectToJSON(requestObject.get(key));
             }
         }
