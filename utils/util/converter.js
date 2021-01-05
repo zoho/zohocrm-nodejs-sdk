@@ -11,7 +11,7 @@ class Converter {
 	commonAPIHandler;
 
 	/**
-	 * This abstract method is to construct the API request.
+	 * This abstract method is to process the API response.
 	 * @param {object} response - An Object containing the API response contents or response.
 	 * @param {string} pack - A String containing the expected method return type.
 	 * @returns An Object representing the class instance.
@@ -67,6 +67,8 @@ class Converter {
 	 * @throws {SDKException}
 	 */
     async valueChecker(className, memberName, keyDetails, value, uniqueValuesMap, instanceNumber){
+		const Utility = require("./utility").Utility;
+		
 		var detailsJO = {};
 
 		var name = keyDetails[Constants.NAME];
@@ -119,6 +121,9 @@ class Converter {
 			}
 			else if(value != null) {
 				check = (valueType != Constants.TYPE_VS_DATATYPE.get(type.toLowerCase()) ? false : true);
+				if(check && type == Constants.INTEGER_NAMESPACE){
+					check = Utility.checkInteger(value);
+				}
 
 				givenType = Object.getPrototypeOf(value).constructor.name;
 			}
@@ -185,7 +190,7 @@ class Converter {
 
 				detailsJO[Constants.ERROR_HASH_CLASS] = className;
 
-				detailsJO[Constants.FIRST_INDEX] = valuesArray.indexOf(value) + 1;
+				detailsJO[Constants.FIRST_INDEX] = valuesArray.indexOf(value);
 
 				detailsJO[Constants.NEXT_INDEX] = instanceNumber;
 

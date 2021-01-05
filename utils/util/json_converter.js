@@ -13,7 +13,7 @@ const FileDetails = require("../../core/com/zoho/crm/api/record/file_details").F
  */
 class JSONConverter extends Converter {
 
-	uniqueValuesMap = [];
+	uniqueValuesMap = {};
 
 	constructor(commonAPIHandler) {
 		super(commonAPIHandler);
@@ -918,11 +918,14 @@ class JSONConverter extends Converter {
 		
 		index = 1;
 		
-		for (var nameIndex = index; nameIndex < name.length; nameIndex++)
-		{
+		for (var nameIndex = index; nameIndex < name.length; nameIndex++){
 			var fieldName = name[nameIndex];
 
-			var firstLetterUppercase = fieldName[0].toUpperCase() +  fieldName.slice(1);
+			var firstLetterUppercase = "";
+
+			if(fieldName.length > 0){
+				firstLetterUppercase = fieldName[0].toUpperCase() +  fieldName.slice(1);
+			}
 			
 			sdkName = sdkName.concat(firstLetterUppercase);
 		}

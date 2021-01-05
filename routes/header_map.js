@@ -17,7 +17,7 @@ class HeaderMap{
 	}
 
 	/**
-	 * The method to add the parameter name and value.
+	 * The method to add the header name and value.
 	 * @param {Header} header - A Header class instance.
 	 * @param {object} value - An object containing the header value.
 	 * @throws {SDKException}

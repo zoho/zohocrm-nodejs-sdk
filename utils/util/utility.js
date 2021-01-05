@@ -719,13 +719,13 @@ class Utility {
             return;
         }
         
-        let fieldAPINamesString = ["textarea", "text", "website", "email", "phone", "mediumtext", "multiselectlookup","profileimage"];
+        let fieldAPINamesString = ["textarea", "text", "website", "email", "phone", "mediumtext", "multiselectlookup","profileimage", "autonumber"];
 		
 		let fieldAPINamesInteger = [ "integer"];
 		
 		let fieldAPINamesBoolean = ["boolean"];
 		
-		let fieldAPINamesLong = ["long", "bigint", "autonumber"];
+		let fieldAPINamesLong = ["long", "bigint"];
 		
 		let fieldAPINamesDouble = ["double", "percent", "lookup", "currency"];
 		
@@ -860,6 +860,10 @@ class Utility {
 
             Utility.apiTypeVsStructureName.set(fieldAPIName, Constants.CONSENT_NAMESPACE);
         }
+    }
+
+    static checkInteger(value){
+        return (parseInt(value) === value) ? true : false;
     }
 }
 

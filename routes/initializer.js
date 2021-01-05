@@ -157,7 +157,7 @@ class Initializer{
 	}
 
 	/**
-	 * This is a getter method to get API environment.
+	 * This is a getter method to get Token Store.
 	 * @returns A TokenStore class instance containing the token store information.
 	 */
 	get store(){

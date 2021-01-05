@@ -2,7 +2,7 @@ const path = require("path");
 const Constants = require("./constants").Constants;
 const SDKException = require("../../core/com/zoho/crm/api/exception/sdk_exception").SDKException
 const DataTypeConverter = require("./datatype_converter").DatatypeConverter;
-
+const Utility = require("./utility").Utility;
 /**
  * This class validates the Header and Parameter values with the type accepted by the CRM APIs.
  */
@@ -54,6 +54,9 @@ class HeaderParamValidator{
         let dataType = Constants.SPECIAL_TYPES.has(type)? Constants.SPECIAL_TYPES.get(type) : type;
 
         if(Constants.TYPE_VS_DATATYPE.has(type.toLowerCase())){
+            if(type == Constants.INTEGER_NAMESPACE){
+                return Utility.checkInteger(value);
+            }
             if(Object.prototype.toString.call(value) != Constants.TYPE_VS_DATATYPE.get(type.toLowerCase())){
                 return false;
             }
