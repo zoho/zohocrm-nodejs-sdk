@@ -1,8 +1,8 @@
 {
   "name": "zcrmsdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node JS SDK for Zoho CRM",
-  "main": "routes/Initializer",
+  "main": "routes/initializer",
   "repository": {
     "type": "git",
     "url": "https://github.com/zoho/zohocrm-nodejs-sdk"

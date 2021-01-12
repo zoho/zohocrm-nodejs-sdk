@@ -61,7 +61,7 @@ class Constants {
 
     static ZOHO_SDK = "X-ZOHO-SDK";
 
-    static SDK_VERSION = "1.0.1";
+    static SDK_VERSION = "1.0.3";
 
     static MYSQL_HOST = "localhost";
 	
@@ -542,6 +542,10 @@ class Constants {
     static FILE_DOES_NOT_EXISTS = "file does not exists";
 
     static CONSENT_LOOKUP = "consent_lookup";
+
+    static USER_MAIL_NULL_ERROR = "USER MAIL NULL ERROR";
+
+    static USER_MAIL_NULL_ERROR_MESSAGE = "User Mail MUST NOT be null. Use userMail setter to set value.";
 }
 
 module.exports = {

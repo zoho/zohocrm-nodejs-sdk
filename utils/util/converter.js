@@ -128,7 +128,7 @@ class Converter {
 				givenType = Object.getPrototypeOf(value).constructor.name;
 			}
 		}
-		else if(type.toLowerCase() !== Constants.OBJECT_KEY){
+		else if(value != null && type.toLowerCase() !== Constants.OBJECT_KEY){
 			let expectedStructure = keyDetails[Constants.TYPE];
 
 			let className = require("../../" + expectedStructure).MasterModel;

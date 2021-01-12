@@ -3,7 +3,6 @@ const Converter = require("./converter").Converter;
 const Initializer = require("../../routes/initializer").Initializer;
 const Constants = require("../util/constants").Constants;
 const Logger = require("winston");
-const HeaderMap = require('../../routes/header_map').HeaderMap;
 const fs = require('fs');
 const SDKException = require('../../core/com/zoho/crm/api/exception/sdk_exception').SDKException;
 
@@ -383,6 +382,8 @@ class Utility {
     }
 
     static async getModules(header) {
+        const HeaderMap = require('../../routes/header_map').HeaderMap;
+
         let ResponseWrapper = require("../../core/com/zoho/crm/api/modules/response_wrapper").ResponseWrapper;
 
         let APIException = require("../../core/com/zoho/crm/api/modules/api_exception").APIException;

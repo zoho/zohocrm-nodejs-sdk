@@ -156,6 +156,10 @@ class FileStore extends TokenStore {
     }
 
     checkTokenExists(email, token, row) {
+        if(email == null){
+            throw new SDKException(Constants.USER_MAIL_NULL_ERROR, Constants.USER_MAIL_NULL_ERROR_MESSAGE);
+        }
+        
         var clientId = token.clientID;
 
         var grantToken = token.grantToken;

@@ -2,7 +2,6 @@ const Converter = require("./converter").Converter;
 const StreamWrapper = require("./stream_wrapper").StreamWrapper;
 const Initializer = require("../../routes/initializer").Initializer;
 const Constants = require("./constants").Constants;
-const JSONConverter = require("./json_converter").JSONConverter;
 const fs = require("fs");
 
 /**
