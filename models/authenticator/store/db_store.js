@@ -230,6 +230,10 @@ class DBStore extends TokenStore {
     }
 
     constructDBQuery(email, token, isDelete) {
+        if(email == null){
+            throw new SDKException(Constants.USER_MAIL_NULL_ERROR, Constants.USER_MAIL_NULL_ERROR_MESSAGE);
+        }
+        
         var query = isDelete? "delete from " : "select * from ";
 
         query += "oauthtoken " + "where user_mail ='" + email + "' and client_id='" + token.clientID + "' and ";
