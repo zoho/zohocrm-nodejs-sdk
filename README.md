@@ -43,7 +43,7 @@ Since Zoho CRM APIs are authenticated with OAuth2 standards, you should register
 
 NodeJS SDK is installable through **npm**. **npm** is a tool for dependency management in NodeJS. SDK expects the following from the client app.
 
-- Client app must have Node(version 9 and above)
+- Client app must have Node(version 12 and above)
 
 - NodeJS SDK must be installed into client app through **npm**.
 

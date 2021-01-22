@@ -309,7 +309,9 @@ class OAuthToken extends Token{
 
         formDataRequestBody.append(Constants.CLIENT_SECRET, this.clientSecret);
 
-        formDataRequestBody.append(Constants.REDIRECT_URL, this.redirectURL);
+        if(this.redirectURL != null){
+            formDataRequestBody.append(Constants.REDIRECT_URL, this.redirectURL);
+        }
 
         formDataRequestBody.append(Constants.CODE, this.grantToken);
 
