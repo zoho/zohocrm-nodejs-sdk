@@ -202,7 +202,6 @@ class APIHTTPConnector{
 		let paramMapString = JSON.stringify(this.parameters, (key, value) => (value instanceof Map ? [...value] : value));
 
 		return Constants.REQUEST_METHOD.concat(" = ").concat(this.requestMethod).concat(" , ").concat(Constants.URL).concat(" = ").concat(this.url).concat(" , ").concat(Constants.HEADERS).concat(" = ").concat(headerMapString).concat(" , ").concat(Constants.PARAMS).concat(" = ").concat(paramMapString).concat(".");
-
 	}
 
 	proxyLog(requestProxy) {

@@ -61,7 +61,7 @@ class Constants {
 
     static ZOHO_SDK = "X-ZOHO-SDK";
 
-    static SDK_VERSION = "1.0.3";
+    static SDK_VERSION = "1.0.4";
 
     static MYSQL_HOST = "localhost";
 	
@@ -126,6 +126,8 @@ class Constants {
     static GIVEN_TYPE = "given-type";
 
     static GIVEN_LENGTH = "given-length";
+
+    static GIVEN_VALUE = "given-value";
 
     static UNACCEPTED_VALUES_ERROR = 'UNACCEPTED VALUES ERROR'
 

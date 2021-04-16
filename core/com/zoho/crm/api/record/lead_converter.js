@@ -10,6 +10,7 @@ class LeadConverter{
 	contacts;
 	assignTo;
 	deals;
+	carryOverTags;
 	keyModified = new Map();
 	/**
 	 * The method to get the overwrite
@@ -163,6 +164,29 @@ class LeadConverter{
 		}
 		this.deals = deals;
 		this.keyModified.set("Deals", 1);
+
+	}
+
+	/**
+	 * The method to get the carryOverTags
+	 * @returns {CarryOverTags} An instance of CarryOverTags
+	 */
+	getCarryOverTags()	{
+		return this.carryOverTags;
+
+	}
+
+	/**
+	 * The method to set the value to carryOverTags
+	 * @param {CarryOverTags} carryOverTags An instance of CarryOverTags
+	 */
+	setCarryOverTags(carryOverTags)	{
+		const CarryOverTags = require("./carry_over_tags").MasterModel;
+		if((carryOverTags != null) && (!(carryOverTags instanceof CarryOverTags)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: carryOverTags EXPECTED TYPE: CarryOverTags", null, null);
+		}
+		this.carryOverTags = carryOverTags;
+		this.keyModified.set("carry_over_tags", 1);
 
 	}
 

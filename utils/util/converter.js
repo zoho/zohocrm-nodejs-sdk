@@ -167,7 +167,7 @@ class Converter {
 				value = value.getValue();
 			}
 
-			if (!valuesJA.toString().includes(value)) {
+			if (!valuesJA.includes(value)) {
 				detailsJO[Constants.ERROR_HASH_FIELD] = memberName;
 
 				detailsJO[Constants.ERROR_HASH_CLASS] = className;
@@ -175,6 +175,8 @@ class Converter {
 				if(instanceNumber != null) {
 					detailsJO[Constants.INDEX] = instanceNumber;
 				}
+
+				detailsJO[Constants.GIVEN_VALUE] = value;
 				
 				detailsJO[Constants.ACCEPTED_VALUES] = valuesJA;
 
