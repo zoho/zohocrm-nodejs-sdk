@@ -381,6 +381,10 @@ class Utility {
         return relatedListArray;
     }
 
+    static async verifyPhotoSupport(moduleAPIName) {
+        return;
+    }
+
     static async getModules(header) {
         const HeaderMap = require('../../routes/header_map').HeaderMap;
 
@@ -541,7 +545,7 @@ class Utility {
         for(let keyInJSON in jsonDetails) {
 
             if(keyInJSON.toLowerCase() == key.toLowerCase()) {
-                returnJSON = {};
+                let returnJSON = {};
 
                 returnJSON[Constants.MODULEPACKAGENAME] = keyInJSON;
 
