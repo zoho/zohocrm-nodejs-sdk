@@ -54,10 +54,11 @@ class RecordOperations{
 	 * @param {BigInt} id A BigInt representing the id
 	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async updateRecord(id, moduleAPIName, request)	{
+	async updateRecord(id, moduleAPIName, request, headerInstance=null)	{
 		const BodyWrapper = require("./body_wrapper").MasterModel;
 		if((!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: id EXPECTED TYPE: BigInt", null, null);
@@ -67,6 +68,9 @@ class RecordOperations{
 		}
 		if((request != null) && (!(request instanceof BodyWrapper)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: request EXPECTED TYPE: BodyWrapper", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -79,6 +83,7 @@ class RecordOperations{
 		handlerInstance.categoryMethod = Constants.REQUEST_CATEGORY_UPDATE;
 		handlerInstance.contentType = "application/json";
 		handlerInstance.request = request;
+		handlerInstance.header = headerInstance;
 		await Utility.getFields(moduleAPIName);
 		handlerInstance.moduleAPIName = moduleAPIName;
 		let ActionHandler = require.resolve("./action_handler");
@@ -91,10 +96,11 @@ class RecordOperations{
 	 * @param {BigInt} id A BigInt representing the id
 	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async deleteRecord(id, moduleAPIName, paramInstance=null)	{
+	async deleteRecord(id, moduleAPIName, paramInstance=null, headerInstance=null)	{
 		if((!(Object.prototype.toString.call(id) == "[object BigInt]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: id EXPECTED TYPE: BigInt", null, null);
 		}
@@ -103,6 +109,9 @@ class RecordOperations{
 		}
 		if((paramInstance != null) && (!(paramInstance instanceof ParameterMap)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: paramInstance EXPECTED TYPE: ParameterMap", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -114,6 +123,7 @@ class RecordOperations{
 		handlerInstance.httpMethod = Constants.REQUEST_METHOD_DELETE;
 		handlerInstance.categoryMethod = Constants.REQUEST_METHOD_DELETE;
 		handlerInstance.param = paramInstance;
+		handlerInstance.header = headerInstance;
 		let ActionHandler = require.resolve("./action_handler");
 		return handlerInstance.apiCall(ActionHandler, "application/json");
 
@@ -189,16 +199,20 @@ class RecordOperations{
 	 * The method to update records
 	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async updateRecords(moduleAPIName, request)	{
+	async updateRecords(moduleAPIName, request, headerInstance=null)	{
 		const BodyWrapper = require("./body_wrapper").MasterModel;
 		if((!(Object.prototype.toString.call(moduleAPIName) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: moduleAPIName EXPECTED TYPE: String", null, null);
 		}
 		if((request != null) && (!(request instanceof BodyWrapper)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: request EXPECTED TYPE: BodyWrapper", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -210,6 +224,7 @@ class RecordOperations{
 		handlerInstance.contentType = "application/json";
 		handlerInstance.request = request;
 		handlerInstance.mandatoryChecker = true;
+		handlerInstance.header = headerInstance;
 		await Utility.getFields(moduleAPIName);
 		handlerInstance.moduleAPIName = moduleAPIName;
 		let ActionHandler = require.resolve("./action_handler");
@@ -221,15 +236,19 @@ class RecordOperations{
 	 * The method to delete records
 	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async deleteRecords(moduleAPIName, paramInstance=null)	{
+	async deleteRecords(moduleAPIName, paramInstance=null, headerInstance=null)	{
 		if((!(Object.prototype.toString.call(moduleAPIName) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: moduleAPIName EXPECTED TYPE: String", null, null);
 		}
 		if((paramInstance != null) && (!(paramInstance instanceof ParameterMap)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: paramInstance EXPECTED TYPE: ParameterMap", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -239,6 +258,7 @@ class RecordOperations{
 		handlerInstance.httpMethod = Constants.REQUEST_METHOD_DELETE;
 		handlerInstance.categoryMethod = Constants.REQUEST_METHOD_DELETE;
 		handlerInstance.param = paramInstance;
+		handlerInstance.header = headerInstance;
 		let ActionHandler = require.resolve("./action_handler");
 		return handlerInstance.apiCall(ActionHandler, "application/json");
 
@@ -248,16 +268,20 @@ class RecordOperations{
 	 * The method to upsert records
 	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {BodyWrapper} request An instance of BodyWrapper
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async upsertRecords(moduleAPIName, request)	{
+	async upsertRecords(moduleAPIName, request, headerInstance=null)	{
 		const BodyWrapper = require("./body_wrapper").MasterModel;
 		if((!(Object.prototype.toString.call(moduleAPIName) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: moduleAPIName EXPECTED TYPE: String", null, null);
 		}
 		if((request != null) && (!(request instanceof BodyWrapper)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: request EXPECTED TYPE: BodyWrapper", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -269,6 +293,7 @@ class RecordOperations{
 		handlerInstance.categoryMethod = Constants.REQUEST_CATEGORY_ACTION;
 		handlerInstance.contentType = "application/json";
 		handlerInstance.request = request;
+		handlerInstance.header = headerInstance;
 		await Utility.getFields(moduleAPIName);
 		handlerInstance.moduleAPIName = moduleAPIName;
 		let ActionHandler = require.resolve("./action_handler");
@@ -313,15 +338,19 @@ class RecordOperations{
 	 * The method to search records
 	 * @param {String} moduleAPIName A String representing the moduleAPIName
 	 * @param {ParameterMap} paramInstance An instance of ParameterMap
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async searchRecords(moduleAPIName, paramInstance=null)	{
+	async searchRecords(moduleAPIName, paramInstance=null, headerInstance=null)	{
 		if((!(Object.prototype.toString.call(moduleAPIName) == "[object String]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: moduleAPIName EXPECTED TYPE: String", null, null);
 		}
 		if((paramInstance != null) && (!(paramInstance instanceof ParameterMap)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: paramInstance EXPECTED TYPE: ParameterMap", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -332,6 +361,7 @@ class RecordOperations{
 		handlerInstance.httpMethod = Constants.REQUEST_METHOD_GET;
 		handlerInstance.categoryMethod = Constants.REQUEST_CATEGORY_READ;
 		handlerInstance.param = paramInstance;
+		handlerInstance.header = headerInstance;
 		await Utility.getFields(moduleAPIName);
 		handlerInstance.moduleAPIName = moduleAPIName;
 		let ResponseHandler = require.resolve("./response_handler");
@@ -545,11 +575,22 @@ class GetRecordParam{
 class GetRecordHeader{
 
 	static IF_MODIFIED_SINCE = new Header("If-Modified-Since", "com.zoho.crm.api.Record.GetRecordHeader");
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.GetRecordHeader");
+}
+
+class UpdateRecordHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.UpdateRecordHeader");
 }
 
 class DeleteRecordParam{
 
 	static WF_TRIGGER = new Param("wf_trigger", "com.zoho.crm.api.Record.DeleteRecordParam");
+}
+
+class DeleteRecordHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.DeleteRecordHeader");
 }
 
 class GetRecordsParam{
@@ -573,12 +614,28 @@ class GetRecordsParam{
 class GetRecordsHeader{
 
 	static IF_MODIFIED_SINCE = new Header("If-Modified-Since", "com.zoho.crm.api.Record.GetRecordsHeader");
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.GetRecordsHeader");
+}
+
+class UpdateRecordsHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.UpdateRecordsHeader");
 }
 
 class DeleteRecordsParam{
 
 	static IDS = new Param("ids", "com.zoho.crm.api.Record.DeleteRecordsParam");
 	static WF_TRIGGER = new Param("wf_trigger", "com.zoho.crm.api.Record.DeleteRecordsParam");
+}
+
+class DeleteRecordsHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.DeleteRecordsHeader");
+}
+
+class UpsertRecordsHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.UpsertRecordsHeader");
 }
 
 class GetDeletedRecordsParam{
@@ -605,6 +662,11 @@ class SearchRecordsParam{
 	static PER_PAGE = new Param("per_page", "com.zoho.crm.api.Record.SearchRecordsParam");
 }
 
+class SearchRecordsHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.Record.SearchRecordsHeader");
+}
+
 class GetMassUpdateStatusParam{
 
 	static JOB_ID = new Param("job_id", "com.zoho.crm.api.Record.GetMassUpdateStatusParam");
@@ -612,15 +674,21 @@ class GetMassUpdateStatusParam{
 
 module.exports = {
 	GetRecordParam : GetRecordParam,
+	UpsertRecordsHeader : UpsertRecordsHeader,
+	GetRecordsHeader : GetRecordsHeader,
+	GetRecordHeader : GetRecordHeader,
+	GetDeletedRecordsParam : GetDeletedRecordsParam,
 	GetMassUpdateStatusParam : GetMassUpdateStatusParam,
+	UpdateRecordHeader : UpdateRecordHeader,
 	GetRecordsParam : GetRecordsParam,
 	SearchRecordsParam : SearchRecordsParam,
 	DeleteRecordParam : DeleteRecordParam,
-	GetRecordsHeader : GetRecordsHeader,
-	GetRecordHeader : GetRecordHeader,
+	UpdateRecordsHeader : UpdateRecordsHeader,
+	SearchRecordsHeader : SearchRecordsHeader,
+	DeleteRecordHeader : DeleteRecordHeader,
 	DeleteRecordsParam : DeleteRecordsParam,
+	DeleteRecordsHeader : DeleteRecordsHeader,
 	MasterModel : RecordOperations,
 	RecordOperations : RecordOperations,
-	GetDeletedRecordsParam : GetDeletedRecordsParam,
 	GetDeletedRecordsHeader : GetDeletedRecordsHeader
 }

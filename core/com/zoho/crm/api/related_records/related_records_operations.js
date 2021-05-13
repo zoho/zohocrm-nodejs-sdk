@@ -164,16 +164,20 @@ class RelatedRecordsOperations{
 	 * The method to update related record
 	 * @param {BigInt} relatedRecordId A BigInt representing the relatedRecordId
 	 * @param {BodyWrapper} request An instance of BodyWrapper
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async updateRelatedRecord(relatedRecordId, request)	{
+	async updateRelatedRecord(relatedRecordId, request, headerInstance=null)	{
 		const BodyWrapper = require("./body_wrapper").MasterModel;
 		if((!(Object.prototype.toString.call(relatedRecordId) == "[object BigInt]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: relatedRecordId EXPECTED TYPE: BigInt", null, null);
 		}
 		if((request != null) && (!(request instanceof BodyWrapper)))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: request EXPECTED TYPE: BodyWrapper", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -190,6 +194,7 @@ class RelatedRecordsOperations{
 		handlerInstance.categoryMethod = Constants.REQUEST_CATEGORY_UPDATE;
 		handlerInstance.contentType = "application/json";
 		handlerInstance.request = request;
+		handlerInstance.header = headerInstance;
 		await Utility.getRelatedLists(this.relatedListAPIName, this.moduleAPIName, handlerInstance);
 		let ActionHandler = require.resolve("./action_handler");
 		return handlerInstance.apiCall(ActionHandler, "application/json");
@@ -199,12 +204,16 @@ class RelatedRecordsOperations{
 	/**
 	 * The method to delink record
 	 * @param {BigInt} relatedRecordId A BigInt representing the relatedRecordId
+	 * @param {HeaderMap} headerInstance An instance of HeaderMap
 	 * @returns {APIResponse} An instance of APIResponse
 	 * @throws {SDKException}
 	 */
-	async delinkRecord(relatedRecordId)	{
+	async delinkRecord(relatedRecordId, headerInstance=null)	{
 		if((!(Object.prototype.toString.call(relatedRecordId) == "[object BigInt]")))	{
 			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: relatedRecordId EXPECTED TYPE: BigInt", null, null);
+		}
+		if((headerInstance != null) && (!(headerInstance instanceof HeaderMap)))	{
+			throw new SDKException(Constants.DATA_TYPE_ERROR, "KEY: headerInstance EXPECTED TYPE: HeaderMap", null, null);
 		}
 		var handlerInstance = new CommonAPIHandler();
 		var apiPath = '';
@@ -219,6 +228,7 @@ class RelatedRecordsOperations{
 		handlerInstance.apiPath = apiPath;
 		handlerInstance.httpMethod = Constants.REQUEST_METHOD_DELETE;
 		handlerInstance.categoryMethod = Constants.REQUEST_METHOD_DELETE;
+		handlerInstance.header = headerInstance;
 		let ActionHandler = require.resolve("./action_handler");
 		return handlerInstance.apiCall(ActionHandler, "application/json");
 
@@ -234,6 +244,7 @@ class GetRelatedRecordsParam{
 class GetRelatedRecordsHeader{
 
 	static IF_MODIFIED_SINCE = new Header("If-Modified-Since", "com.zoho.crm.api.RelatedRecords.GetRelatedRecordsHeader");
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.RelatedRecords.GetRelatedRecordsHeader");
 }
 
 class DelinkRecordsParam{
@@ -246,10 +257,22 @@ class GetRelatedRecordHeader{
 	static IF_MODIFIED_SINCE = new Header("If-Modified-Since", "com.zoho.crm.api.RelatedRecords.GetRelatedRecordHeader");
 }
 
+class UpdateRelatedRecordHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.RelatedRecords.UpdateRelatedRecordHeader");
+}
+
+class DelinkRecordHeader{
+
+	static X_EXTERNAL = new Header("X-EXTERNAL", "com.zoho.crm.api.RelatedRecords.DelinkRecordHeader");
+}
+
 module.exports = {
 	GetRelatedRecordHeader : GetRelatedRecordHeader,
 	MasterModel : RelatedRecordsOperations,
 	RelatedRecordsOperations : RelatedRecordsOperations,
+	DelinkRecordHeader : DelinkRecordHeader,
+	UpdateRelatedRecordHeader : UpdateRelatedRecordHeader,
 	GetRelatedRecordsParam : GetRelatedRecordsParam,
 	GetRelatedRecordsHeader : GetRelatedRecordsHeader,
 	DelinkRecordsParam : DelinkRecordsParam
