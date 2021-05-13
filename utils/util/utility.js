@@ -20,11 +20,19 @@ class Utility {
 
     static forceRefresh = false;
 
+    static moduleAPIname = null;
+
+    static async getFields(moduleAPIName) {
+        this.moduleAPIname = moduleAPIName;
+
+        await this.getFieldsInfo(this.moduleAPIname);
+    }
+
     /**
      * This method to fetch field details of the current module for the current user and store the result in a JSON file.
      * @param {string} moduleAPIName - A String containing the CRM module API name.
      */
-    static async getFields(moduleAPIName) {
+    static async getFieldsInfo(moduleAPIName) {
         let lastModifiedTime = null;
 
         try {
@@ -208,7 +216,7 @@ class Utility {
             fs.writeFileSync(recordFieldDetailsPath, JSON.stringify(recordFieldDetailsJson));
 
             for(let module of modifiedModules) {
-                await Utility.getFields(module);
+                await Utility.getFieldsInfo(module);
             }
         }
     }
@@ -304,7 +312,7 @@ class Utility {
 
                     commonAPIHandler.moduleAPIName = relatedListObject[Constants.MODULE];
     
-                    await Utility.getFields(relatedListObject[Constants.MODULE]);
+                    await Utility.getFieldsInfo(relatedListObject[Constants.MODULE]);
                 }
 
                 return true
@@ -521,8 +529,15 @@ class Utility {
                     errorResponse[Constants.STATUS] = responseObject.getStatus().getValue();
     
                     errorResponse[Constants.MESSAGE] = responseObject.getMessage().getValue();
-    
-                    throw new SDKException(Constants.API_EXCEPTION, null, errorResponse, null);
+
+                    let exception = new SDKException(Constants.API_EXCEPTION, null, errorResponse, null);
+
+                    if(this.moduleAPIname.toLowerCase() == moduleAPIName.toLowerCase())
+                    {
+                        throw exception;
+                    }
+
+                    Logger.error(Constants.API_EXCEPTION, exception);
                 }   
             }
             else{
@@ -561,7 +576,7 @@ class Utility {
     static async refreshModules() {
         this.forceRefresh = true;
 
-        await Utility.getFields(null);
+        await Utility.getFieldsInfo(null);
 
         this.forceRefresh = false;
     }
@@ -712,7 +727,7 @@ class Utility {
         }
 
         if(module.length > 0) {
-            await Utility.getFields(module);
+            await Utility.getFieldsInfo(module);
         }
 
         fieldDetail.name = keyName;

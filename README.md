@@ -62,7 +62,7 @@ You can include the SDK to your project using:
     ```
 - The NodeJS SDK will be installed and a package named **zcrmsdk** will be created in the local machine.
 
-- Another method to install the SDK 
+- Another method to install the SDK
     - Add dependencies to the package.json of the node server with the latest version (recommended)
     - Run **npm install** in the directory which installs all the dependencies mentioned in package.json.
 
@@ -183,7 +183,7 @@ class CustomStore extends TokenStore{
     }
 
     /**
-     * 
+     *
      * @param {UserSignature} user A UserSignature class instance.
      * @param {Token} token A Token (zcrmsdk/models/authenticator/oauth_token) class instance.
      * @returns A Token class instance representing the user token details.
@@ -195,7 +195,7 @@ class CustomStore extends TokenStore{
     }
 
     /**
-     * 
+     *
      * @param {UserSignature} user A UserSignature class instance.
      * @param {Token} token A Token (zcrmsdk/models/authenticator/oauth_token) class instance.
      * @throws {SDKException} if any error occurs.
@@ -205,7 +205,7 @@ class CustomStore extends TokenStore{
     }
 
     /**
-     * 
+     *
      * @param {Token} token A Token (zcrmsdk/models/authenticator/oauth_token) class instance.
      * @throws {SDKException} if any error occurs.
      */
@@ -305,7 +305,7 @@ Before you get started with creating your NodeJS application, you need to regist
      * autoRefreshFields
      * if true - all the modules' fields will be auto-refreshed in the background, every hour.
      * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
-     * 
+     *
      * pickListValidation
      * A boolean field that validates user input for a pick list field and allows or disallows the addition of a new value to the list.
      * if true - the SDK validates the input. If the value does not exist in the pick list, the SDK throws an error.
@@ -314,7 +314,7 @@ Before you get started with creating your NodeJS application, you need to regist
     let sdkConfig = new SDKConfigBuilder().setPickListValidation(false).setAutoRefreshFields(true).build();
     ```
 
-- The path containing the absolute directory path (in the key resourcePath) to store user-specific files containing information about fields in modules. 
+- The path containing the absolute directory path (in the key resourcePath) to store user-specific files containing information about fields in modules.
     ```js
     let resourcePath = "/Users/user_name/Documents/nodejs-app";
     ```
@@ -667,107 +667,107 @@ class Record{
             let recordOperations = new RecordOperations();
 
             let paramInstance = new ParameterMap();
-    
+
             await paramInstance.add(GetRecordsParam.APPROVED, "both");
-    
+
             let headerInstance = new HeaderMap();
-    
+
             await headerInstance.add(GetRecordsHeader.IF_MODIFIED_SINCE, new Date("2020-01-01T00:00:00+05:30"));
-    
+
             //Call getRecords method that takes paramInstance, headerInstance and moduleAPIName as parameters
             let response = await recordOperations.getRecords(moduleAPIName, paramInstance, headerInstance);
-            
+
             if(response != null){
 
                 //Get the status code from response
                 console.log("Status Code: " + response.statusCode);
-    
+
                 if([204, 304].includes(response.statusCode)){
                     console.log(response.statusCode == 204? "No Content" : "Not Modified");
-    
+
                     return;
                 }
-    
+
                 //Get the object from response
                 let responseObject = response.object;
-    
+
                 if(responseObject != null){
-    
+
                     //Check if expected ResponseWrapper instance is received
                     if(responseObject instanceof ResponseWrapper){
-    
+
                         //Get the array of obtained Record instances
                         let records = responseObject.getData();
-    
+
                         for (let index = 0; index < records.length; index++) {
                             let record = records[index];
-    
+
                             //Get the ID of each Record
                             console.log("Record ID: " + record.getId());
-                            
+
                             //Get the createdBy User instance of each Record
                             let createdBy = record.getCreatedBy();
-                            
+
                             //Check if createdBy is not null
                             if(createdBy != null){
                                 //Get the ID of the createdBy User
                                 console.log("Record Created By User-ID: " + createdBy.getId());
-                                
+
                                 //Get the name of the createdBy User
                                 console.log("Record Created By User-Name: " + createdBy.getName());
-                                
+
                                 //Get the Email of the createdBy User
                                 console.log("Record Created By User-Email: " + createdBy.getEmail());
                             }
-                            
+
                             //Get the CreatedTime of each Record
                             console.log("Record CreatedTime: " + record.getCreatedTime());
-                            
+
                             //Get the modifiedBy User instance of each Record
                             let modifiedBy = record.getModifiedBy();
-                            
+
                             //Check if modifiedBy is not null
                             if(modifiedBy != null){
                                 //Get the ID of the modifiedBy User
                                 console.log("Record Modified By User-ID: " + modifiedBy.getId());
-                                
+
                                 //Get the name of the modifiedBy User
                                 console.log("Record Modified By User-Name: " + modifiedBy.getName());
-                                
+
                                 //Get the Email of the modifiedBy User
                                 console.log("Record Modified By User-Email: " + modifiedBy.getEmail());
                             }
-                            
+
                             //Get the ModifiedTime of each Record
                             console.log("Record ModifiedTime: " + record.getModifiedTime());
-                            
+
                             //Get the list of Tag instance each Record
                             let tags = record.getTag();
-                            
+
                             //Check if tags is not null
                             if(tags != null){
                                 tags.forEach(tag => {
                                     //Get the Name of each Tag
                                     console.log("Record Tag Name: " + tag.getName());
-                                    
+
                                     //Get the Id of each Tag
                                     console.log("Record Tag ID: " + tag.getId());
-                                    
+
                                 });
                             }
-    
+
                             //Get all the values
                             let keyValues = record.getKeyValues();
-    
+
                             let keyArray = Array.from(keyValues.keys());
-                            
+
                             for (let keyIndex = 0; keyIndex < keyArray.length; keyIndex++) {
                                 const keyName = keyArray[keyIndex];
-    
+
                                 let value = keyValues.get(keyName);
 
                                 console.log(keyName + " : " + value);
-                            }  
+                            }
                         }
                     }
                 }
@@ -862,7 +862,7 @@ class Record{
         * autoRefreshFields
         * if true - all the modules' fields will be auto-refreshed in the background, every hour.
         * if false - the fields will not be auto-refreshed in the background. The user can manually delete the file(s) or refresh the fields using methods from ModuleFieldsHandler(utils/util/module_fields_handler.js)
-        * 
+        *
         * pickListValidation
         * A boolean field that validates user input for a pick list field and allows or disallows the addition of a new value to the list.
         * True - the SDK validates the input. If the value does not exist in the pick list, the SDK throws an error.
@@ -871,7 +871,7 @@ class Record{
         let sdkConfig = new SDKConfigBuilder().setPickListValidation(false).setAutoRefreshFields(true).build();
 
         /*
-         * The path containing the absolute directory path to store user specific JSON files containing module fields information. 
+         * The path containing the absolute directory path to store user specific JSON files containing module fields information.
          */
         let resourcePath = "/Users/user_name/Documents/nodejs-app";
 
@@ -882,119 +882,119 @@ class Record{
          * 3 -> Token instance
          * 4 -> TokenStore instance
          * 5 -> sdkConfig instance
-         * 6 -> resourcePath   
+         * 6 -> resourcePath
          * 7 -> Logger instance
          */
         await Initializer.initialize(user, environment, token, tokenstore, sdkConfig, resourcePath, logger);
 
         try {
             let moduleAPIName = "Leads";
-    
+
             //Get instance of RecordOperations Class
             let recordOperations = new RecordOperations();
-    
+
             let paramInstance = new ParameterMap();
-    
+
             await paramInstance.add(GetRecordsParam.APPROVED, "both");
-    
+
             let headerInstance = new HeaderMap();
-    
+
             await headerInstance.add(GetRecordsHeader.IF_MODIFIED_SINCE, new Date("2020-01-01T00:00:00+05:30"));
-    
+
             //Call getRecords method that takes paramInstance, headerInstance and moduleAPIName as parameters
             let response = await recordOperations.getRecords(moduleAPIName, paramInstance, headerInstance);
-            
+
             if(response != null){
 
                 //Get the status code from response
                 console.log("Status Code: " + response.statusCode);
-    
+
                 if([204, 304].includes(response.statusCode)){
                     console.log(response.statusCode == 204? "No Content" : "Not Modified");
-    
+
                     return;
                 }
-    
+
                 //Get the object from response
                 let responseObject = response.object;
-    
+
                 if(responseObject != null){
-    
+
                     //Check if expected ResponseWrapper instance is received
                     if(responseObject instanceof ResponseWrapper){
-    
+
                         //Get the array of obtained Record instances
                         let records = responseObject.getData();
-    
+
                         for (let index = 0; index < records.length; index++) {
                             let record = records[index];
-    
+
                             //Get the ID of each Record
                             console.log("Record ID: " + record.getId());
-                            
+
                             //Get the createdBy User instance of each Record
                             let createdBy = record.getCreatedBy();
-                            
+
                             //Check if createdBy is not null
                             if(createdBy != null){
                                 //Get the ID of the createdBy User
                                 console.log("Record Created By User-ID: " + createdBy.getId());
-                                
+
                                 //Get the name of the createdBy User
                                 console.log("Record Created By User-Name: " + createdBy.getName());
-                                
+
                                 //Get the Email of the createdBy User
                                 console.log("Record Created By User-Email: " + createdBy.getEmail());
                             }
-                            
+
                             //Get the CreatedTime of each Record
                             console.log("Record CreatedTime: " + record.getCreatedTime());
-                            
+
                             //Get the modifiedBy User instance of each Record
                             let modifiedBy = record.getModifiedBy();
-                            
+
                             //Check if modifiedBy is not null
                             if(modifiedBy != null){
                                 //Get the ID of the modifiedBy User
                                 console.log("Record Modified By User-ID: " + modifiedBy.getId());
-                                
+
                                 //Get the name of the modifiedBy User
                                 console.log("Record Modified By User-Name: " + modifiedBy.getName());
-                                
+
                                 //Get the Email of the modifiedBy User
                                 console.log("Record Modified By User-Email: " + modifiedBy.getEmail());
                             }
-                            
+
                             //Get the ModifiedTime of each Record
                             console.log("Record ModifiedTime: " + record.getModifiedTime());
-                            
+
                             //Get the list of Tag instance each Record
                             let tags = record.getTag();
-                            
+
                             //Check if tags is not null
                             if(tags != null){
                                 tags.forEach(tag => {
                                     //Get the Name of each Tag
                                     console.log("Record Tag Name: " + tag.getName());
-                                    
+
                                     //Get the Id of each Tag
                                     console.log("Record Tag ID: " + tag.getId());
-                                    
+
                                 });
                             }
-    
+
                             //Get all the values
                             let keyValues = record.getKeyValues();
-    
+
                             let keyArray = Array.from(keyValues.keys());
-                            
+
                             for (let keyIndex = 0; keyIndex < keyArray.length; keyIndex++) {
                                 const keyName = keyArray[keyIndex];
-    
+
                                 let value = keyValues.get(keyName);
 
                                 console.log(keyName + " : " + value);
-                            }  
+                            }
                         }
                     }
                 }
